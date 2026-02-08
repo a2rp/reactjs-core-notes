@@ -122,6 +122,9 @@ export const Styled = {
 
         .appRoutesWrapper {
             min-height: 100vh;
+
+            .breadcrumbs {
+            }
         }
 
         .sliderWrapper {

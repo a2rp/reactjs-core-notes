@@ -7,24 +7,24 @@ import { Routes, Route, Navigate } from "react-router-dom";
    ========================= */
 const Home = lazy(() => import("./pages/home"));
 const About = lazy(() => import("./pages/about"));
-const NotFound = lazy(() => import("./pages/placeholder"));
+const NotFound = lazy(() => import("./pages/notFound"));
 
 /* =========================
    Quick Reference
    ========================= */
-const QuickIndex = lazy(() => import("./pages/placeholder"));
-const QuickJSX = lazy(() => import("./pages/placeholder"));
-const QuickComponents = lazy(() => import("./pages/placeholder"));
-const QuickProps = lazy(() => import("./pages/placeholder"));
-const QuickState = lazy(() => import("./pages/placeholder"));
-const QuickEvents = lazy(() => import("./pages/placeholder"));
-const QuickListsKeys = lazy(() => import("./pages/placeholder"));
-const QuickConditional = lazy(() => import("./pages/placeholder"));
-const QuickUseEffect = lazy(() => import("./pages/placeholder"));
-const QuickHooks = lazy(() => import("./pages/placeholder"));
-const QuickForms = lazy(() => import("./pages/placeholder"));
-const QuickStyling = lazy(() => import("./pages/placeholder"));
-const QuickPerformance = lazy(() => import("./pages/placeholder"));
+const QuickIndex = lazy(() => import("./pages/quick"));
+const QuickJSX = lazy(() => import("./pages/quick/jsx"));
+const QuickComponents = lazy(() => import("./pages/quick/components"));
+const QuickProps = lazy(() => import("./pages/quick/props"));
+const QuickState = lazy(() => import("./pages/quick/state"));
+const QuickEvents = lazy(() => import("./pages/quick/events"));
+const QuickListsKeys = lazy(() => import("./pages/quick/listsKeys"));
+const QuickConditional = lazy(() => import("./pages/quick/conditional"));
+const QuickUseEffect = lazy(() => import("./pages/quick/useEffect"));
+const QuickHooks = lazy(() => import("./pages/quick/hooks"));
+const QuickForms = lazy(() => import("./pages/quick/forms"));
+const QuickStyling = lazy(() => import("./pages/quick/styling"));
+const QuickPerformance = lazy(() => import("./pages/quick/performance"));
 
 /* =========================
    React Foundations

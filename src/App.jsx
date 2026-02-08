@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Styled } from "./App.styled";
 import { IoMenu } from "react-icons/io5";
 import { FiMoon, FiSun } from "react-icons/fi";
 import AppRoutes from "./AppRoutes";
-import { NavLink } from "react-router-dom";
 import SliderContent from "./components/sliderContent";
 import Footer from "./components/footer";
+import Breadcrumbs from "./components/breadcrumbs";
+import GoToTop from "./components/goToTop";
+import ScrollToTopOnRouteChange from "./components/scrollToTopOnRouteChange";
 
 const THEME_KEY = "appTheme"; // "dark" | "light"
 
@@ -43,6 +45,9 @@ const App = () => {
         setMenuClicked(false);
     };
 
+    // main ref for scroll go to top button
+    const mainScrollRef = useRef(null);
+
     return (
         <Styled.Wrapper>
             <Styled.Header>
@@ -78,14 +83,21 @@ const App = () => {
                 </div>
             </Styled.Header>
 
-            <Styled.Main>
+            <Styled.Main ref={mainScrollRef}>
+                <ScrollToTopOnRouteChange scrollRef={mainScrollRef} />
+
                 <div className="appRoutesWrapper">
+                    <div className="breadcrumbs">
+                        <Breadcrumbs />
+                    </div>
                     <AppRoutes />
                 </div>
 
                 <Styled.Footer>
                     <Footer />
                 </Styled.Footer>
+
+                <GoToTop scrollRef={mainScrollRef} />
 
                 <div
                     className={`sliderWrapper ${menuClicked === true ? "" : "hideSliderWrapper"}`}
