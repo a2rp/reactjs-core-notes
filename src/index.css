@@ -1,7 +1,10 @@
 /* =========================
-   AirNova - Base Index CSS
-   White Theme
+   Base Index CSS
+   Theme-driven (Black & White)
    ========================= */
+
+/* Import theme tokens */
+@import "./theme.css";
 
 /* 1) Reset */
 *,
@@ -14,7 +17,7 @@
 
 /* 2) Root + defaults */
 :root {
-    color-scheme: light;
+    color-scheme: dark;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -41,8 +44,8 @@ body {
         Arial,
         sans-serif;
     line-height: 1.55;
-    background: #f7f8fb;
-    color: #0b0f19;
+    background: var(--color-bg);
+    color: var(--color-text-primary);
     overflow-x: hidden;
 }
 
@@ -72,15 +75,15 @@ h5,
 h6 {
     font-weight: 800;
     line-height: 1.15;
-    color: #0b0f19;
+    color: var(--color-text-primary);
 }
 
 p {
-    color: rgba(11, 15, 25, 0.78);
+    color: var(--color-text-secondary);
 }
 
 small {
-    color: rgba(11, 15, 25, 0.6);
+    color: var(--color-text-muted);
 }
 
 strong,
@@ -95,13 +98,13 @@ i {
 
 /* 6) Links */
 a {
-    color: inherit;
+    color: var(--color-link);
     text-decoration: none;
     text-underline-offset: 3px;
 }
 
 a:hover {
-    /* text-decoration: underline; */
+    color: var(--color-link-hover);
 }
 
 /* 7) Lists */
@@ -140,7 +143,7 @@ textarea {
 
 /* Placeholder */
 ::placeholder {
-    color: rgba(11, 15, 25, 0.45);
+    color: var(--color-text-muted);
 }
 
 /* Disabled */
@@ -160,13 +163,13 @@ table {
 hr {
     border: 0;
     height: 1px;
-    background: rgba(11, 15, 25, 0.12);
+    background: var(--color-border);
 }
 
 /* 11) Selection */
 ::selection {
-    background: rgba(241, 90, 36, 0.22);
-    color: #0b0f19;
+    background: var(--color-text-primary);
+    color: var(--color-bg);
 }
 
 /* 12) Focus visibility */
@@ -175,7 +178,7 @@ hr {
 }
 
 :focus-visible {
-    outline: 2px solid rgba(241, 90, 36, 0.9);
+    outline: 2px solid var(--color-text-primary);
     outline-offset: 3px;
 }
 
@@ -202,21 +205,21 @@ hr {
 }
 
 ::-webkit-scrollbar-track {
-    background: rgba(11, 15, 25, 0.06);
+    background: var(--color-surface);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(11, 15, 25, 0.18);
+    background: var(--color-border-light);
     border-radius: 999px;
-    border: 2px solid rgba(247, 248, 251, 0.9);
+    border: 2px solid var(--color-surface-2);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(11, 15, 25, 0.26);
+    background: var(--color-border);
 }
 
 /* Firefox */
 * {
     scrollbar-width: thin;
-    scrollbar-color: rgba(11, 15, 25, 0.24) rgba(11, 15, 25, 0.06);
+    scrollbar-color: var(--color-border) var(--color-surface);
 }

@@ -1,94 +1,146 @@
 // AppRoutes.jsx
 import React, { Suspense, lazy } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { CircularProgress } from "@mui/material";
-import {
-    FiHome,
-    FiWifi,
-    FiBriefcase,
-    FiInfo,
-    FiMapPin,
-    FiDollarSign,
-    FiStar,
-    FiHelpCircle,
-    FiUser,
-    FiPhone,
-    FiUsers,
-    FiShield,
-    FiFileText,
-} from "react-icons/fi";
 
-/* Lazy pages */
+/* =========================
+   Base Pages
+   ========================= */
 const Home = lazy(() => import("./pages/home"));
-const Internet = lazy(() => import("./pages/broadband"));
-const Business = lazy(() => import("./pages/placeholder"));
-const HowItWorks = lazy(() => import("./pages/placeholder"));
-const Coverage = lazy(() => import("./pages/placeholder"));
-const Pricing = lazy(() => import("./pages/placeholder"));
-const Reviews = lazy(() => import("./pages/placeholder"));
-const Support = lazy(() => import("./pages/placeholder"));
-const Account = lazy(() => import("./pages/placeholder"));
 const About = lazy(() => import("./pages/placeholder"));
-const Contact = lazy(() => import("./pages/placeholder"));
-const Careers = lazy(() => import("./pages/placeholder"));
-const Privacy = lazy(() => import("./pages/placeholder"));
-const Terms = lazy(() => import("./pages/placeholder"));
 const NotFound = lazy(() => import("./pages/placeholder"));
 
-/* Central nav config */
-export const routeLinks = [
-    { key: "home", label: "Home", path: "/", icon: FiHome },
+/* =========================
+   Quick Reference
+   ========================= */
+const QuickIndex = lazy(() => import("./pages/placeholder"));
+const QuickJSX = lazy(() => import("./pages/placeholder"));
+const QuickComponents = lazy(() => import("./pages/placeholder"));
+const QuickProps = lazy(() => import("./pages/placeholder"));
+const QuickState = lazy(() => import("./pages/placeholder"));
+const QuickEvents = lazy(() => import("./pages/placeholder"));
+const QuickListsKeys = lazy(() => import("./pages/placeholder"));
+const QuickConditional = lazy(() => import("./pages/placeholder"));
+const QuickUseEffect = lazy(() => import("./pages/placeholder"));
+const QuickHooks = lazy(() => import("./pages/placeholder"));
+const QuickForms = lazy(() => import("./pages/placeholder"));
+const QuickStyling = lazy(() => import("./pages/placeholder"));
+const QuickPerformance = lazy(() => import("./pages/placeholder"));
 
-    {
-        key: "internet",
-        label: "Home Broadband",
-        path: "/broadband",
-        icon: FiWifi,
-    },
-    {
-        key: "business",
-        label: "Business Solutions",
-        path: "/business",
-        icon: FiBriefcase,
-    },
-    {
-        key: "howItWorks",
-        label: "How AirNova Works",
-        path: "/how-airnova-works",
-        icon: FiInfo,
-    },
-    {
-        key: "coverage",
-        label: "Service Areas",
-        path: "/service-areas",
-        icon: FiMapPin,
-    },
-    { key: "pricing", label: "Plans", path: "/plans", icon: FiDollarSign },
-    {
-        key: "reviews",
-        label: "Customer Stories",
-        path: "/customer-stories",
-        icon: FiStar,
-    },
+/* =========================
+   React Foundations
+   ========================= */
+const ReactIndex = lazy(() => import("./pages/placeholder"));
+const WhyReact = lazy(() => import("./pages/placeholder"));
+const ReactVsDOM = lazy(() => import("./pages/placeholder"));
+const RenderingModel = lazy(() => import("./pages/placeholder"));
+const VirtualDOM = lazy(() => import("./pages/placeholder"));
+const Reconciliation = lazy(() => import("./pages/placeholder"));
+const JSXInDepth = lazy(() => import("./pages/placeholder"));
+const Components = lazy(() => import("./pages/placeholder"));
+const ComponentTypes = lazy(() => import("./pages/placeholder"));
 
-    { key: "support", label: "Support", path: "/support", icon: FiHelpCircle },
-    { key: "account", label: "My Account", path: "/account", icon: FiUser },
+/* =========================
+   Props, State & Data Flow
+   ========================= */
+const Props = lazy(() => import("./pages/placeholder"));
+const PropsChildren = lazy(() => import("./pages/placeholder"));
+const State = lazy(() => import("./pages/placeholder"));
+const StateImmutability = lazy(() => import("./pages/placeholder"));
+const StateBatching = lazy(() => import("./pages/placeholder"));
+const DataFlow = lazy(() => import("./pages/placeholder"));
+const LiftingState = lazy(() => import("./pages/placeholder"));
+const DerivedState = lazy(() => import("./pages/placeholder"));
 
-    { key: "about", label: "About", path: "/about", icon: FiUsers },
-    { key: "contact", label: "Contact", path: "/contact", icon: FiPhone },
-];
+/* =========================
+   Events & Interaction
+   ========================= */
+const Events = lazy(() => import("./pages/placeholder"));
+const SyntheticEvents = lazy(() => import("./pages/placeholder"));
+const Controlled = lazy(() => import("./pages/placeholder"));
+const Uncontrolled = lazy(() => import("./pages/placeholder"));
 
-export const legalLinks = [
-    {
-        key: "privacy",
-        label: "Privacy Policy",
-        path: "/legal/privacy",
-        icon: FiShield,
-    },
-    { key: "terms", label: "Terms", path: "/legal/terms", icon: FiFileText },
-];
+/* =========================
+   Lists & Conditional UI
+   ========================= */
+const ListsKeys = lazy(() => import("./pages/placeholder"));
+const KeysExplained = lazy(() => import("./pages/placeholder"));
+const ConditionalRendering = lazy(() => import("./pages/placeholder"));
+const UIStates = lazy(() => import("./pages/placeholder"));
 
-/* MUI fallback */
+/* =========================
+   Side Effects & Refs
+   ========================= */
+const UseEffect = lazy(() => import("./pages/placeholder"));
+const UseEffectDeps = lazy(() => import("./pages/placeholder"));
+const EffectCleanup = lazy(() => import("./pages/placeholder"));
+const UseEffectBugs = lazy(() => import("./pages/placeholder"));
+const Refs = lazy(() => import("./pages/placeholder"));
+const UseRef = lazy(() => import("./pages/placeholder"));
+
+/* =========================
+   Hooks
+   ========================= */
+const HooksIndex = lazy(() => import("./pages/placeholder"));
+const UseStateHook = lazy(() => import("./pages/placeholder"));
+const UseEffectHook = lazy(() => import("./pages/placeholder"));
+const UseRefHook = lazy(() => import("./pages/placeholder"));
+const UseMemo = lazy(() => import("./pages/placeholder"));
+const UseCallback = lazy(() => import("./pages/placeholder"));
+const CustomHooks = lazy(() => import("./pages/placeholder"));
+const HooksRules = lazy(() => import("./pages/placeholder"));
+
+/* =========================
+   Styling (styled-components)
+   ========================= */
+const StylingIndex = lazy(() => import("./pages/placeholder"));
+const WhyStyled = lazy(() => import("./pages/placeholder"));
+const ThemeTokens = lazy(() => import("./pages/placeholder"));
+const GlobalStyles = lazy(() => import("./pages/placeholder"));
+const Variants = lazy(() => import("./pages/placeholder"));
+const Responsive = lazy(() => import("./pages/placeholder"));
+
+/* =========================
+   Performance
+   ========================= */
+const PerformanceIndex = lazy(() => import("./pages/placeholder"));
+const WhyRerenders = lazy(() => import("./pages/placeholder"));
+const ReactMemo = lazy(() => import("./pages/placeholder"));
+const UseMemoPerf = lazy(() => import("./pages/placeholder"));
+const UseCallbackPerf = lazy(() => import("./pages/placeholder"));
+const WhenNotOptimize = lazy(() => import("./pages/placeholder"));
+
+/* =========================
+   Architecture
+   ========================= */
+const ArchitectureIndex = lazy(() => import("./pages/placeholder"));
+const ContainerPresentational = lazy(() => import("./pages/placeholder"));
+const LayoutPatterns = lazy(() => import("./pages/placeholder"));
+const CompoundComponents = lazy(() => import("./pages/placeholder"));
+const StatePlacement = lazy(() => import("./pages/placeholder"));
+
+/* =========================
+   Routing
+   ========================= */
+const RoutingIndex = lazy(() => import("./pages/placeholder"));
+const RouterBasics = lazy(() => import("./pages/placeholder"));
+const NestedRoutes = lazy(() => import("./pages/placeholder"));
+const LayoutRoutes = lazy(() => import("./pages/placeholder"));
+const NotFoundRoute = lazy(() => import("./pages/placeholder"));
+const CodeSplitting = lazy(() => import("./pages/placeholder"));
+
+/* =========================
+   UI Patterns
+   ========================= */
+const PatternsIndex = lazy(() => import("./pages/placeholder"));
+const LoadingPatterns = lazy(() => import("./pages/placeholder"));
+const ErrorBoundaries = lazy(() => import("./pages/placeholder"));
+const Modals = lazy(() => import("./pages/placeholder"));
+const Drawers = lazy(() => import("./pages/placeholder"));
+const ScrollRestoration = lazy(() => import("./pages/placeholder"));
+
+/* =========================
+   Fallback Loader
+   ========================= */
 function PageLoader() {
     return (
         <div
@@ -97,9 +149,10 @@ function PageLoader() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
+                color: "var(--color-text-muted)",
             }}
         >
-            <CircularProgress size={42} thickness={4} />
+            Loading…
         </div>
     );
 }
@@ -108,26 +161,216 @@ const AppRoutes = () => {
     return (
         <Suspense fallback={<PageLoader />}>
             <Routes>
-                <Route path="/" element={<Home />} />
-
-                <Route path="/broadband" element={<Internet />} />
-                <Route path="/business" element={<Business />} />
-                <Route path="/how-airnova-works" element={<HowItWorks />} />
-                <Route path="/service-areas" element={<Coverage />} />
-                <Route path="/plans" element={<Pricing />} />
-                <Route path="/customer-stories" element={<Reviews />} />
-                <Route path="/support" element={<Support />} />
-
-                <Route path="/account" element={<Account />} />
-
+                {/* Base */}
+                <Route path="/" element={<Navigate to="/home" replace />} />
+                <Route path="/home" element={<Home />} />
                 <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/careers" element={<Careers />} />
 
-                <Route path="/legal/privacy" element={<Privacy />} />
-                <Route path="/legal/terms" element={<Terms />} />
+                {/* Quick Reference */}
+                <Route path="/quick" element={<QuickIndex />} />
+                <Route path="/quick/jsx" element={<QuickJSX />} />
+                <Route path="/quick/components" element={<QuickComponents />} />
+                <Route path="/quick/props" element={<QuickProps />} />
+                <Route path="/quick/state" element={<QuickState />} />
+                <Route path="/quick/events" element={<QuickEvents />} />
+                <Route path="/quick/lists-keys" element={<QuickListsKeys />} />
+                <Route
+                    path="/quick/conditional-rendering"
+                    element={<QuickConditional />}
+                />
+                <Route path="/quick/useeffect" element={<QuickUseEffect />} />
+                <Route path="/quick/hooks" element={<QuickHooks />} />
+                <Route path="/quick/forms" element={<QuickForms />} />
+                <Route path="/quick/styling" element={<QuickStyling />} />
+                <Route
+                    path="/quick/performance"
+                    element={<QuickPerformance />}
+                />
 
-                <Route path="/home" element={<Navigate to="/" replace />} />
+                {/* React Core */}
+                <Route path="/react" element={<ReactIndex />} />
+                <Route path="/react/why-react" element={<WhyReact />} />
+                <Route path="/react/react-vs-dom" element={<ReactVsDOM />} />
+                <Route
+                    path="/react/rendering-model"
+                    element={<RenderingModel />}
+                />
+                <Route path="/react/virtual-dom" element={<VirtualDOM />} />
+                <Route
+                    path="/react/reconciliation"
+                    element={<Reconciliation />}
+                />
+                <Route path="/react/jsx" element={<JSXInDepth />} />
+                <Route path="/react/components" element={<Components />} />
+                <Route
+                    path="/react/component-types"
+                    element={<ComponentTypes />}
+                />
+
+                {/* Props & State */}
+                <Route path="/react/props" element={<Props />} />
+                <Route
+                    path="/react/props-children"
+                    element={<PropsChildren />}
+                />
+                <Route path="/react/state" element={<State />} />
+                <Route
+                    path="/react/state-immutability"
+                    element={<StateImmutability />}
+                />
+                <Route
+                    path="/react/state-batching"
+                    element={<StateBatching />}
+                />
+                <Route path="/react/data-flow" element={<DataFlow />} />
+                <Route path="/react/lifting-state" element={<LiftingState />} />
+                <Route path="/react/derived-state" element={<DerivedState />} />
+
+                {/* Events */}
+                <Route path="/react/events" element={<Events />} />
+                <Route
+                    path="/react/synthetic-events"
+                    element={<SyntheticEvents />}
+                />
+                <Route
+                    path="/react/controlled-components"
+                    element={<Controlled />}
+                />
+                <Route
+                    path="/react/uncontrolled-components"
+                    element={<Uncontrolled />}
+                />
+
+                {/* Lists */}
+                <Route path="/react/lists-and-keys" element={<ListsKeys />} />
+                <Route
+                    path="/react/keys-explained"
+                    element={<KeysExplained />}
+                />
+                <Route
+                    path="/react/conditional-rendering"
+                    element={<ConditionalRendering />}
+                />
+                <Route path="/react/ui-states" element={<UIStates />} />
+
+                {/* Effects & Refs */}
+                <Route path="/react/useeffect" element={<UseEffect />} />
+                <Route
+                    path="/react/useeffect-dependencies"
+                    element={<UseEffectDeps />}
+                />
+                <Route
+                    path="/react/effect-cleanup"
+                    element={<EffectCleanup />}
+                />
+                <Route
+                    path="/react/common-useeffect-bugs"
+                    element={<UseEffectBugs />}
+                />
+                <Route path="/react/refs" element={<Refs />} />
+                <Route path="/react/useref" element={<UseRef />} />
+
+                {/* Hooks */}
+                <Route path="/hooks" element={<HooksIndex />} />
+                <Route path="/hooks/usestate" element={<UseStateHook />} />
+                <Route path="/hooks/useeffect" element={<UseEffectHook />} />
+                <Route path="/hooks/useref" element={<UseRefHook />} />
+                <Route path="/hooks/usememo" element={<UseMemo />} />
+                <Route path="/hooks/usecallback" element={<UseCallback />} />
+                <Route path="/hooks/custom-hooks" element={<CustomHooks />} />
+                <Route path="/hooks/rules-of-hooks" element={<HooksRules />} />
+
+                {/* Styling */}
+                <Route path="/styling" element={<StylingIndex />} />
+                <Route
+                    path="/styling/why-styled-components"
+                    element={<WhyStyled />}
+                />
+                <Route path="/styling/theme-tokens" element={<ThemeTokens />} />
+                <Route
+                    path="/styling/global-styles"
+                    element={<GlobalStyles />}
+                />
+                <Route
+                    path="/styling/component-variants"
+                    element={<Variants />}
+                />
+                <Route path="/styling/responsive" element={<Responsive />} />
+
+                {/* Performance */}
+                <Route path="/performance" element={<PerformanceIndex />} />
+                <Route
+                    path="/performance/why-rerenders"
+                    element={<WhyRerenders />}
+                />
+                <Route path="/performance/react-memo" element={<ReactMemo />} />
+                <Route path="/performance/usememo" element={<UseMemoPerf />} />
+                <Route
+                    path="/performance/usecallback"
+                    element={<UseCallbackPerf />}
+                />
+                <Route
+                    path="/performance/when-not-to-optimize"
+                    element={<WhenNotOptimize />}
+                />
+
+                {/* Architecture */}
+                <Route path="/architecture" element={<ArchitectureIndex />} />
+                <Route
+                    path="/architecture/container-presentational"
+                    element={<ContainerPresentational />}
+                />
+                <Route
+                    path="/architecture/layout-patterns"
+                    element={<LayoutPatterns />}
+                />
+                <Route
+                    path="/architecture/compound-components"
+                    element={<CompoundComponents />}
+                />
+                <Route
+                    path="/architecture/state-placement"
+                    element={<StatePlacement />}
+                />
+
+                {/* Routing */}
+                <Route path="/routing" element={<RoutingIndex />} />
+                <Route
+                    path="/routing/react-router-basics"
+                    element={<RouterBasics />}
+                />
+                <Route
+                    path="/routing/nested-routes"
+                    element={<NestedRoutes />}
+                />
+                <Route
+                    path="/routing/layout-routes"
+                    element={<LayoutRoutes />}
+                />
+                <Route path="/routing/not-found" element={<NotFoundRoute />} />
+                <Route
+                    path="/routing/code-splitting"
+                    element={<CodeSplitting />}
+                />
+
+                {/* Patterns */}
+                <Route path="/patterns" element={<PatternsIndex />} />
+                <Route
+                    path="/patterns/loading-patterns"
+                    element={<LoadingPatterns />}
+                />
+                <Route
+                    path="/patterns/error-boundaries"
+                    element={<ErrorBoundaries />}
+                />
+                <Route path="/patterns/modals" element={<Modals />} />
+                <Route path="/patterns/drawers" element={<Drawers />} />
+                <Route
+                    path="/patterns/scroll-restoration"
+                    element={<ScrollRestoration />}
+                />
+
+                {/* 404 */}
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </Suspense>
