@@ -17,6 +17,14 @@ const SliderContent = ({ handleNavClick }) => {
             { to: "/home", label: "Home", type: "parent", end: true },
             { to: "/about", label: "About", type: "parent", end: true },
 
+            // react interview
+            {
+                to: "/react-interview",
+                label: "React Interview QnA",
+                type: "parent",
+                end: true,
+            },
+
             // Quick Reference
             {
                 to: "/quick",
@@ -41,130 +49,122 @@ const SliderContent = ({ handleNavClick }) => {
             { to: "/quick/styling", label: "Styling", type: "child" },
             { to: "/quick/performance", label: "Performance", type: "child" },
 
-            // react interview
-            {
-                to: "/react-interview",
-                label: "React Interview QnA",
-                type: "parent",
-                end: true,
-            },
+            // // React Core
+            // { to: "/react", label: "React Core", type: "parent", end: true },
+            // { to: "/react/why-react", label: "Why React", type: "child" },
+            // {
+            //     to: "/react/rendering-model",
+            //     label: "Rendering Model",
+            //     type: "child",
+            // },
+            // { to: "/react/jsx", label: "JSX In Depth", type: "child" },
+            // { to: "/react/components", label: "Components", type: "child" },
+            // { to: "/react/props", label: "Props", type: "child" },
+            // { to: "/react/state", label: "State", type: "child" },
+            // { to: "/react/events", label: "Events", type: "child" },
+            // {
+            //     to: "/react/lists-and-keys",
+            //     label: "Lists & Keys",
+            //     type: "child",
+            // },
+            // {
+            //     to: "/react/conditional-rendering",
+            //     label: "Conditional Rendering",
+            //     type: "child",
+            // },
+            // { to: "/react/useeffect", label: "useEffect", type: "child" },
 
-            // React Core
-            { to: "/react", label: "React Core", type: "parent", end: true },
-            { to: "/react/why-react", label: "Why React", type: "child" },
-            {
-                to: "/react/rendering-model",
-                label: "Rendering Model",
-                type: "child",
-            },
-            { to: "/react/jsx", label: "JSX In Depth", type: "child" },
-            { to: "/react/components", label: "Components", type: "child" },
-            { to: "/react/props", label: "Props", type: "child" },
-            { to: "/react/state", label: "State", type: "child" },
-            { to: "/react/events", label: "Events", type: "child" },
-            {
-                to: "/react/lists-and-keys",
-                label: "Lists & Keys",
-                type: "child",
-            },
-            {
-                to: "/react/conditional-rendering",
-                label: "Conditional Rendering",
-                type: "child",
-            },
-            { to: "/react/useeffect", label: "useEffect", type: "child" },
+            // // Hooks
+            // { to: "/hooks", label: "Hooks", type: "parent", end: true },
+            // { to: "/hooks/usestate", label: "useState", type: "child" },
+            // { to: "/hooks/useeffect", label: "useEffect", type: "child" },
+            // { to: "/hooks/useref", label: "useRef", type: "child" },
+            // { to: "/hooks/usememo", label: "useMemo", type: "child" },
+            // { to: "/hooks/usecallback", label: "useCallback", type: "child" },
+            // { to: "/hooks/custom-hooks", label: "Custom Hooks", type: "child" },
 
-            // Hooks
-            { to: "/hooks", label: "Hooks", type: "parent", end: true },
-            { to: "/hooks/usestate", label: "useState", type: "child" },
-            { to: "/hooks/useeffect", label: "useEffect", type: "child" },
-            { to: "/hooks/useref", label: "useRef", type: "child" },
-            { to: "/hooks/usememo", label: "useMemo", type: "child" },
-            { to: "/hooks/usecallback", label: "useCallback", type: "child" },
-            { to: "/hooks/custom-hooks", label: "Custom Hooks", type: "child" },
+            // // Styling
+            // { to: "/styling", label: "Styling", type: "parent", end: true },
+            // {
+            //     to: "/styling/theme-tokens",
+            //     label: "Theme Tokens",
+            //     type: "child",
+            // },
+            // {
+            //     to: "/styling/component-variants",
+            //     label: "Component Variants",
+            //     type: "child",
+            // },
+            // {
+            //     to: "/styling/responsive",
+            //     label: "Responsive Patterns",
+            //     type: "child",
+            // },
 
-            // Styling
-            { to: "/styling", label: "Styling", type: "parent", end: true },
-            {
-                to: "/styling/theme-tokens",
-                label: "Theme Tokens",
-                type: "child",
-            },
-            {
-                to: "/styling/component-variants",
-                label: "Component Variants",
-                type: "child",
-            },
-            {
-                to: "/styling/responsive",
-                label: "Responsive Patterns",
-                type: "child",
-            },
+            // // Performance
+            // {
+            //     to: "/performance",
+            //     label: "Performance",
+            //     type: "parent",
+            //     end: true,
+            // },
+            // {
+            //     to: "/performance/react-memo",
+            //     label: "React.memo",
+            //     type: "child",
+            // },
+            // { to: "/performance/usememo", label: "useMemo", type: "child" },
+            // {
+            //     to: "/performance/usecallback",
+            //     label: "useCallback",
+            //     type: "child",
+            // },
 
-            // Performance
-            {
-                to: "/performance",
-                label: "Performance",
-                type: "parent",
-                end: true,
-            },
-            {
-                to: "/performance/react-memo",
-                label: "React.memo",
-                type: "child",
-            },
-            { to: "/performance/usememo", label: "useMemo", type: "child" },
-            {
-                to: "/performance/usecallback",
-                label: "useCallback",
-                type: "child",
-            },
+            // // Architecture
+            // {
+            //     to: "/architecture",
+            //     label: "Architecture",
+            //     type: "parent",
+            //     end: true,
+            // },
+            // {
+            //     to: "/architecture/lifting-state",
+            //     label: "Lifting State",
+            //     type: "child",
+            // },
+            // {
+            //     to: "/architecture/derived-state",
+            //     label: "Derived State",
+            //     type: "child",
+            // },
 
-            // Architecture
-            {
-                to: "/architecture",
-                label: "Architecture",
-                type: "parent",
-                end: true,
-            },
-            {
-                to: "/architecture/lifting-state",
-                label: "Lifting State",
-                type: "child",
-            },
-            {
-                to: "/architecture/derived-state",
-                label: "Derived State",
-                type: "child",
-            },
+            // // Routing
+            // { to: "/routing", label: "Routing", type: "parent", end: true },
+            // {
+            //     to: "/routing/react-router-basics",
+            //     label: "React Router Basics",
+            //     type: "child",
+            // },
+            // {
+            //     to: "/routing/nested-routes",
+            //     label: "Nested Routes",
+            //     type: "child",
+            // },
 
-            // Routing
-            { to: "/routing", label: "Routing", type: "parent", end: true },
-            {
-                to: "/routing/react-router-basics",
-                label: "React Router Basics",
-                type: "child",
-            },
-            {
-                to: "/routing/nested-routes",
-                label: "Nested Routes",
-                type: "child",
-            },
-
-            // Patterns
-            {
-                to: "/patterns",
-                label: "UI Patterns",
-                type: "parent",
-                end: true,
-            },
-            {
-                to: "/patterns/loading-patterns",
-                label: "Loading Patterns",
-                type: "child",
-            },
-            { to: "/patterns/modals", label: "Modals", type: "child" },
-            { to: "/patterns/drawers", label: "Drawers", type: "child" },
+            // // Patterns
+            // {
+            //     to: "/patterns",
+            //     label: "UI Patterns",
+            //     type: "parent",
+            //     end: true,
+            // },
+            // {
+            //     to: "/patterns/loading-patterns",
+            //     label: "Loading Patterns",
+            //     type: "child",
+            // },
+            // { to: "/patterns/modals", label: "Modals", type: "child" },
+            // { to: "/patterns/drawers", label: "Drawers", type: "child" },
         ],
         [],
     );

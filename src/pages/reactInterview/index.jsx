@@ -14,6 +14,9 @@ const ReactInterview = () => {
     const contentRef = useRef(null);
     const listBodyRef = useRef(null);
 
+    // controls whether content should scroll into view for the NEXT activeIndex change
+    const nextScrollRef = useRef({ scrollContent: false });
+
     const [searchParams, setSearchParams] = useSearchParams();
 
     // flatten: sections -> questions
@@ -67,7 +70,7 @@ const ReactInterview = () => {
 
     const [activeIndex, setActiveIndex] = useState(() => getIndexFromUrl());
 
-    const active = flatQuestions[activeIndex];
+    const active = totalQuestions > 0 ? flatQuestions[activeIndex] : undefined;
 
     const scrollContentIntoView = () => {
         const el = contentRef.current;
@@ -79,6 +82,7 @@ const ReactInterview = () => {
         });
     };
 
+    // IMPORTANT: only scroll inside list wrapper, not whole page
     const scrollActiveInListIntoView = () => {
         const wrap = listBodyRef.current;
         if (!wrap) return;
@@ -91,6 +95,7 @@ const ReactInterview = () => {
 
         const currentScrollTop = wrap.scrollTop;
 
+        // center item inside the wrapper
         const offset =
             nodeRect.top -
             wrapRect.top -
@@ -118,14 +123,15 @@ const ReactInterview = () => {
     };
 
     const setActiveIndexAndUrl = (idx, opts = { scrollContent: true }) => {
+        if (!totalQuestions) return;
+
         const safe = Math.max(0, Math.min(totalQuestions - 1, idx));
+
+        // store intent for next activeIndex change
+        nextScrollRef.current = { scrollContent: !!opts.scrollContent };
+
         setActiveIndex(safe);
         updateUrlForIndex(safe);
-
-        window.requestAnimationFrame(() => {
-            scrollActiveInListIntoView();
-            if (opts.scrollContent) scrollContentIntoView();
-        });
     };
 
     const handlePickQuestion = (idx) => {
@@ -156,19 +162,35 @@ const ReactInterview = () => {
     }, [flatQuestions.length]);
 
     // 2) If user refreshes / shares URL / manually changes query param:
-    // sync activeIndex from URL without forcing content scroll
+    // sync activeIndex from URL WITHOUT content scroll
     useEffect(() => {
         if (!flatQuestions.length) return;
 
         const idxFromUrl = getIndexFromUrl();
         if (idxFromUrl !== activeIndex) {
+            nextScrollRef.current = { scrollContent: false };
             setActiveIndex(idxFromUrl);
-            window.requestAnimationFrame(() => {
-                scrollActiveInListIntoView();
-            });
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [searchParams, flatQuestions.length]);
+
+    // 3) Single place that performs scrolling when activeIndex changes
+    useEffect(() => {
+        if (!flatQuestions.length) return;
+
+        const { scrollContent } = nextScrollRef.current || {
+            scrollContent: false,
+        };
+
+        window.requestAnimationFrame(() => {
+            scrollActiveInListIntoView();
+            if (scrollContent) scrollContentIntoView();
+
+            // reset after applying once
+            nextScrollRef.current = { scrollContent: false };
+        });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [activeIndex, flatQuestions.length]);
 
     // group rendering with section headers and correct indices
     const renderQuestionList = () => {
@@ -217,14 +239,6 @@ const ReactInterview = () => {
         });
     };
 
-    useEffect(() => {
-        if (!flatQuestions.length) return;
-
-        window.requestAnimationFrame(() => {
-            scrollActiveInListIntoView();
-        });
-    }, [activeIndex, flatQuestions.length]);
-
     return (
         <Styled.Wrapper>
             <header className="pageHeader">
@@ -267,7 +281,8 @@ const ReactInterview = () => {
                                     {active?.sectionTitle || "React"}
                                 </span>
                                 <span className="counter">
-                                    {activeIndex + 1} / {totalQuestions}
+                                    {totalQuestions ? activeIndex + 1 : 0} /{" "}
+                                    {totalQuestions}
                                 </span>
                             </div>
 
@@ -289,6 +304,7 @@ const ReactInterview = () => {
                                     className="navBtn"
                                     onClick={handleNext}
                                     disabled={
+                                        !totalQuestions ||
                                         activeIndex === totalQuestions - 1
                                     }
                                     aria-label="Next question"
@@ -314,7 +330,12 @@ const ReactInterview = () => {
                             <div className="aTitle">Answer</div>
 
                             {active?.a ? (
-                                <div className="aText">{active.a}</div>
+                                <div
+                                    className="aText"
+                                    dangerouslySetInnerHTML={{
+                                        __html: active.a,
+                                    }}
+                                />
                             ) : (
                                 <div className="emptyAnswer">
                                     Answer not added yet. Add it later in

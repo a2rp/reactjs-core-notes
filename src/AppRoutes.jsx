@@ -169,6 +169,9 @@ const AppRoutes = () => {
                 <Route path="/home" element={<Home />} />
                 <Route path="/about" element={<About />} />
 
+                {/* react interview */}
+                <Route path="/react-interview" element={<ReactInterview />} />
+
                 {/* Quick Reference */}
                 <Route path="/quick" element={<QuickIndex />} />
                 <Route path="/quick/jsx" element={<QuickJSX />} />
@@ -189,9 +192,6 @@ const AppRoutes = () => {
                     path="/quick/performance"
                     element={<QuickPerformance />}
                 />
-
-                {/* react interview */}
-                <Route path="/react-interview" element={<ReactInterview />} />
 
                 {/* React Core */}
                 <Route path="/react" element={<ReactIndex />} />

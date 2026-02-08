@@ -312,13 +312,41 @@ export const Styled = {
 
         .aText {
             font-size: 14px;
-            line-height: 1.75;
+            line-height: 1.8;
             color: var(--color-text-primary);
-            padding: 12px 14px;
-            border: 1px solid var(--color-border);
-            background: var(--color-surface-2);
-            border-radius: 14px;
-            white-space: pre-wrap;
+
+            p {
+                margin-bottom: 12px;
+            }
+
+            ul {
+                margin: 10px 0 14px 18px;
+            }
+
+            li {
+                margin-bottom: 6px;
+            }
+
+            strong {
+                font-weight: 700;
+            }
+
+            em {
+                font-style: italic;
+            }
+
+            pre {
+                margin-top: 12px;
+                padding: 12px;
+                background: var(--color-surface-2);
+                border: 1px solid var(--color-border);
+                overflow-x: auto;
+                font-size: 13px;
+            }
+
+            code {
+                font-family: Consolas, Monaco, monospace;
+            }
         }
 
         .emptyAnswer {
