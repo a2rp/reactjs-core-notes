@@ -54,10 +54,13 @@ export const Styled = {
                 color: var(--color-text-primary);
                 text-decoration: none;
 
-                transition: background 160ms ease;
+                transition:
+                    background 160ms ease,
+                    transform 0.2s ease;
 
                 &:hover {
                     background: var(--color-surface-2);
+                    transform: scale(1.2);
                 }
 
                 svg {

@@ -6,7 +6,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
    Base Pages
    ========================= */
 const Home = lazy(() => import("./pages/home"));
-const About = lazy(() => import("./pages/placeholder"));
+const About = lazy(() => import("./pages/about"));
 const NotFound = lazy(() => import("./pages/placeholder"));
 
 /* =========================
