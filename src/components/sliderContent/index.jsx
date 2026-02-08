@@ -41,6 +41,14 @@ const SliderContent = ({ handleNavClick }) => {
             { to: "/quick/styling", label: "Styling", type: "child" },
             { to: "/quick/performance", label: "Performance", type: "child" },
 
+            // react interview
+            {
+                to: "/react-interview",
+                label: "React Interview QnA",
+                type: "parent",
+                end: true,
+            },
+
             // React Core
             { to: "/react", label: "React Core", type: "parent", end: true },
             { to: "/react/why-react", label: "Why React", type: "child" },

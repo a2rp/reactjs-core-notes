@@ -26,6 +26,9 @@ const QuickForms = lazy(() => import("./pages/quick/forms"));
 const QuickStyling = lazy(() => import("./pages/quick/styling"));
 const QuickPerformance = lazy(() => import("./pages/quick/performance"));
 
+// react interview
+const ReactInterview = lazy(() => import("./pages/reactInterview"));
+
 /* =========================
    React Foundations
    ========================= */
@@ -186,6 +189,9 @@ const AppRoutes = () => {
                     path="/quick/performance"
                     element={<QuickPerformance />}
                 />
+
+                {/* react interview */}
+                <Route path="/react-interview" element={<ReactInterview />} />
 
                 {/* React Core */}
                 <Route path="/react" element={<ReactIndex />} />
