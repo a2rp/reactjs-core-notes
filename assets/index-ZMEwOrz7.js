@@ -1,4 +1,4 @@
-import{d as o,j as e}from"./index-DbjC5TsS.js";const t={Wrapper:o.div`
+import{d as o,j as e}from"./index-Dw88vYR0.js";const t={Wrapper:o.div`
         max-width: 900px;
         margin: 0 auto;
         padding: 40px 20px 80px;
