@@ -1443,7 +1443,7 @@ function Card({ title = "Untitled" }) {
 <h4>Real example: Counter with a label</h4>
 
 <p>
-    Let’s say we want a reusable counter component that shows a label
+    Let's say we want a reusable counter component that shows a label
     and lets the user increment a value.
 </p>
 
@@ -1654,7 +1654,7 @@ function handleClick(e) {
 
 <p>
     Older versions of React reused event objects (event pooling).
-    This meant you couldn’t access the event asynchronously.
+    This meant you couldn't access the event asynchronously.
 </p>
 
 <pre><code>
@@ -1703,7 +1703,7 @@ function handleSubmit(e) {
 </code></pre>
 
 <p>
-    You don’t pass arguments directly like in HTML.
+    You don't pass arguments directly like in HTML.
     You wrap the call in a function.
 </p>
 
@@ -1752,7 +1752,7 @@ function handleSubmit(e) {
             q: "What are SyntheticEvents?",
             a: `
 <p>
-    <strong>SyntheticEvent</strong> is React’s <em>cross-browser wrapper</em>
+    <strong>SyntheticEvent</strong> is React's <em>cross-browser wrapper</em>
     around the native browser event system.
 </p>
 
@@ -1882,7 +1882,7 @@ e.persist();
 <h4>Interview one-liner</h4>
 
 <p>
-    A <strong>SyntheticEvent</strong> is React’s cross-browser wrapper around
+    A <strong>SyntheticEvent</strong> is React's cross-browser wrapper around
     native DOM events that provides a consistent API and enables efficient
     event handling through delegation.
 </p>
@@ -2129,7 +2129,7 @@ return (
 
 <hr />
 
-<h4>What happens if you don’t use keys?</h4>
+<h4>What happens if you don't use keys?</h4>
 
 <p>
     React will still render the list, but you may see:
@@ -2722,7 +2722,7 @@ const element = &lt;h1&gt;Hello&lt;/h1&gt;;
             a: `
 <p>
     <strong>React Fiber</strong> is the <em>internal re-implementation</em> of
-    React’s core rendering algorithm, introduced in <strong>React 16</strong>.
+    React's core rendering algorithm, introduced in <strong>React 16</strong>.
 </p>
 
 <p>
@@ -2870,7 +2870,7 @@ const element = &lt;h1&gt;Hello&lt;/h1&gt;;
 <h4>One-line interview answer</h4>
 
 <p>
-    <strong>React Fiber</strong> is React’s internal rendering engine that
+    <strong>React Fiber</strong> is React's internal rendering engine that
     allows rendering work to be split, paused, prioritized, and resumed,
     enabling concurrent rendering and smoother user experiences.
 </p>
@@ -2883,7 +2883,7 @@ const element = &lt;h1&gt;Hello&lt;/h1&gt;;
             a: `
 <p>
     <strong>React Fiber</strong> was created to solve one core problem:
-    <em>React’s old rendering engine was too synchronous and blocking</em>
+    <em>React's old rendering engine was too synchronous and blocking</em>
     for modern, complex user interfaces.
 </p>
 
@@ -2929,7 +2929,7 @@ setState(showTooltip);
 <h4>What Fiber introduced (the real solution)</h4>
 
 <p>
-    Fiber re-architected React’s rendering engine so that rendering work can be:
+    Fiber re-architected React's rendering engine so that rendering work can be:
 </p>
 
 <ul>
@@ -3452,8 +3452,8 @@ function Form({ children }) {
 </p>
 
 <ul>
-    <li>You don’t know what the child is</li>
-    <li>You don’t want to re-create it</li>
+    <li>You don't know what the child is</li>
+    <li>You don't want to re-create it</li>
     <li>You only want to add or override props</li>
 </ul>
 
@@ -3553,7 +3553,7 @@ function Form({ children }) {
 
     <p>
         React follows <strong>one-way data flow</strong>. A child component
-        cannot directly change another sibling’s state.
+        cannot directly change another sibling's state.
     </p>
 
     <p>
@@ -3725,7 +3725,7 @@ const EnhancedComponent = hoc(OriginalComponent);
 <h4>Simple example</h4>
 
 <p>
-    Let’s say we want to log whenever a component renders.
+    Let's say we want to log whenever a component renders.
 </p>
 
 <pre>
@@ -3881,7 +3881,7 @@ function withAuth(WrappedComponent) {
             a: `
 <p>
     The <strong>children</strong> prop is a special prop in React that represents
-    <em>whatever is placed between a component’s opening and closing tags</em>.
+    <em>whatever is placed between a component's opening and closing tags</em>.
 </p>
 
 <p>
@@ -4010,7 +4010,7 @@ function MouseTracker({ children }) {
         <strong>children is optional</strong> – it can be undefined
     </li>
     <li>
-        Don’t assume children is always an array
+        Don't assume children is always an array
     </li>
     <li>
         Use <code>React.Children</code> utilities when manipulating children
@@ -4316,7 +4316,7 @@ items.map(item => (
         },
         {
             id: "core-029",
-            q: "Does React.lazy work with named exports? If not, what’s the workaround?",
+            q: "Does React.lazy work with named exports? If not, what's the workaround?",
             a: `
 <p>
     <strong>No</strong>, <code>React.lazy</code> does <strong>not</strong> work
@@ -5339,234 +5339,5662 @@ function UserCard({ name, age = 18 }: UserCardProps) {
 `,
         },
 
-        { id: "core-036", q: "What are the advantages of React?", a: "" },
+        {
+            id: "core-036",
+            q: "What are the advantages of React?",
+            a: `
+<p>
+    React is popular because it makes building complex user interfaces
+    <strong>predictable</strong>, <strong>reusable</strong>, and
+    <strong>scalable</strong>.
+</p>
+
+<p>
+    It focuses only on the UI layer, but provides powerful patterns that
+    help manage state and rendering efficiently.
+</p>
+
+<hr />
+
+<h4>1. Component-based architecture</h4>
+
+<p>
+    React applications are built using small, reusable components.
+    Each component manages its own logic and UI, which improves
+    maintainability and code organization.
+</p>
+
+<ul>
+    <li>Encourages reusability</li>
+    <li>Improves separation of concerns</li>
+    <li>Makes large applications easier to manage</li>
+</ul>
+
+<hr />
+
+<h4>2. Declarative UI</h4>
+
+<p>
+    React follows a declarative approach. You describe <strong>what</strong>
+    the UI should look like for a given state, and React updates the DOM accordingly.
+</p>
+
+<pre><code>
+function Greeting({ name }) {
+    return &lt;h1&gt;Hello, {name}&lt;/h1&gt;;
+}
+</code></pre>
+
+<p>
+    This reduces manual DOM manipulation and makes UI logic easier to reason about.
+</p>
+
+<hr />
+
+<h4>3. Efficient rendering model</h4>
+
+<p>
+    React minimizes DOM updates using reconciliation and batching.
+    Instead of reloading the entire page, it updates only the parts
+    that actually changed.
+</p>
+
+<ul>
+    <li>Better performance for dynamic UIs</li>
+    <li>Optimized diffing algorithm</li>
+</ul>
+
+<hr />
+
+<h4>4. One-way data flow</h4>
+
+<p>
+    Data flows from parent to child via props.
+    This makes state changes more predictable and easier to debug.
+</p>
+
+<ul>
+    <li>Improves application stability</li>
+    <li>Reduces unexpected side effects</li>
+</ul>
+
+<hr />
+
+<h4>5. Strong ecosystem and flexibility</h4>
+
+<p>
+    React provides flexibility in choosing libraries for routing,
+    state management, and data fetching.
+</p>
+
+<ul>
+    <li>Routing - React Router</li>
+    <li>State management - Context API, Redux</li>
+    <li>Data fetching - React Query, SWR</li>
+</ul>
+
+<hr />
+
+<h4>6. Cross-platform development</h4>
+
+<p>
+    React concepts extend to React Native for building mobile applications.
+    This allows developers to reuse knowledge across platforms.
+</p>
+
+<hr />
+
+<h4>7. Large community and industry adoption</h4>
+
+<p>
+    React has strong community support, extensive documentation,
+    and wide industry usage, making it a stable long-term choice.
+</p>
+
+<hr />
+
+<h4>Interview-ready summary</h4>
+
+<ul>
+    <li>Reusable component-based architecture</li>
+    <li>Declarative and predictable UI updates</li>
+    <li>Efficient rendering and performance optimizations</li>
+    <li>One-way data flow</li>
+    <li>Strong ecosystem and cross-platform support</li>
+</ul>
+
+<p>
+    React's main advantage is that it simplifies building scalable
+    and maintainable user interfaces while remaining flexible.
+</p>
+`,
+        },
+
         {
             id: "core-037",
             q: "What are common limitations or pain points in React?",
-            a: "",
+            a: `
+<p>
+    React is powerful and widely adopted, but like any technology,
+    it has some real-world limitations and pain points that developers
+    should understand.
+</p>
+
+<hr />
+
+<h4>1. React is only the UI layer</h4>
+
+<p>
+    React focuses only on building user interfaces. It does not include
+    built-in solutions for routing, state management, data fetching,
+    or form handling.
+</p>
+
+<p>
+    Developers must choose additional libraries such as React Router,
+    Redux, or React Query. While this flexibility is powerful, it can
+    also create decision fatigue and inconsistency across projects.
+</p>
+
+<hr />
+
+<h4>2. State management complexity in large apps</h4>
+
+<p>
+    Local component state is simple, but as applications grow,
+    managing shared state across many components becomes complex.
+</p>
+
+<ul>
+    <li>Prop drilling across multiple layers</li>
+    <li>Overusing Context leading to re-render issues</li>
+    <li>Complex global state logic</li>
+</ul>
+
+<p>
+    Without proper architecture, state management can become difficult
+    to maintain.
+</p>
+
+<hr />
+
+<h4>3. Performance pitfalls</h4>
+
+<p>
+    React is efficient, but developers can easily introduce
+    unnecessary re-renders.
+</p>
+
+<ul>
+    <li>Creating new object or function references on every render</li>
+    <li>Incorrect or unstable keys in lists</li>
+    <li>Large component trees without memoization</li>
+</ul>
+
+<p>
+    React does not automatically optimize everything.
+    Developers must understand rendering behavior.
+</p>
+
+<hr />
+
+<h4>4. Boilerplate and architectural decisions</h4>
+
+<p>
+    In medium to large projects, codebases can become filled with
+    custom hooks, providers, wrappers, and abstraction layers.
+</p>
+
+<p>
+    If patterns are not clearly defined, the codebase may feel fragmented.
+</p>
+
+<hr />
+
+<h4>5. SEO and SSR complexity</h4>
+
+<p>
+    By default, React apps are single-page applications.
+    This can affect SEO unless server-side rendering or
+    static rendering is used.
+</p>
+
+<p>
+    Frameworks like Next.js are commonly used to solve this.
+</p>
+
+<hr />
+
+<h4>6. Ecosystem volatility</h4>
+
+<p>
+    React core is stable, but the surrounding ecosystem
+    evolves rapidly. Tooling, bundlers, and recommended
+    patterns can change frequently.
+</p>
+
+<hr />
+
+<h4>Interview-ready summary</h4>
+
+<ul>
+    <li>React is only the view layer</li>
+    <li>Scaling state management requires good architecture</li>
+    <li>Performance issues can occur if patterns are misused</li>
+    <li>SSR and SEO require additional setup</li>
+</ul>
+
+<p>
+    React is powerful, but it requires strong architectural
+    decisions to scale effectively.
+</p>
+`,
         },
         {
             id: "core-038",
             q: "Static type checking in React: what are the recommended options?",
-            a: "",
+            a: `
+<p>
+    Static type checking in React helps catch errors <strong>before runtime</strong>.
+    It ensures that props, state, function parameters, and API data follow the expected structure.
+    This improves reliability and refactoring safety.
+</p>
+
+<hr />
+
+<h4>1. TypeScript - the modern standard</h4>
+
+<p>
+    <strong>TypeScript</strong> is the most recommended and widely adopted option
+    for static type checking in React today.
+</p>
+
+<p>
+    It provides compile-time validation, better IDE autocomplete,
+    safer refactoring, and improved developer experience.
+</p>
+
+<pre><code>
+type UserCardProps = {
+    name: string;
+    age?: number;
+    isAdmin: boolean;
+};
+
+function UserCard({ name, age, isAdmin }: UserCardProps) {
+    return (
+        &lt;div&gt;
+            &lt;h3&gt;{name}&lt;/h3&gt;
+            &lt;p&gt;Age: {age}&lt;/p&gt;
+            {isAdmin && &lt;span&gt;Admin&lt;/span&gt;}
+        &lt;/div&gt;
+    );
+}
+</code></pre>
+
+<p>
+    If the wrong type is passed, TypeScript shows an error during development
+    before the code even runs.
+</p>
+
+<hr />
+
+<h4>2. Flow - older alternative</h4>
+
+<p>
+    <strong>Flow</strong> is another static type checker originally developed by Facebook.
+</p>
+
+<ul>
+    <li>Provides compile-time type checking</li>
+    <li>Similar concept to TypeScript</li>
+    <li>Less commonly used today compared to TypeScript</li>
+</ul>
+
+<p>
+    In most modern React projects, TypeScript has largely replaced Flow.
+</p>
+
+<hr />
+
+<h4>3. How static typing differs from PropTypes</h4>
+
+<ul>
+    <li>TypeScript and Flow check types at compile-time</li>
+    <li>PropTypes only show warnings in development</li>
+    <li>PropTypes do not prevent runtime issues in production</li>
+</ul>
+
+<p>
+    Static typing is stronger because it prevents incorrect code from compiling.
+</p>
+
+<hr />
+
+<h4>4. Important practical note</h4>
+
+<p>
+    Static typing protects your code structure, but it does not validate external
+    API data at runtime.
+</p>
+
+<p>
+    For API validation, libraries like Zod or Yup are commonly used alongside TypeScript.
+</p>
+
+<hr />
+
+<h4>Interview-ready summary</h4>
+
+<ul>
+    <li>TypeScript is the recommended option for static type checking in React</li>
+    <li>Flow exists but is less common today</li>
+    <li>Static typing catches errors before runtime</li>
+    <li>PropTypes are not true static type checking</li>
+</ul>
+
+<p>
+    In modern React applications, TypeScript is considered the standard approach
+    for static type safety.
+</p>
+`,
         },
+
         {
             id: "core-039",
             q: "What does react-dom do and why is it separate from react?",
-            a: "",
+            a: `
+<p>
+    The <strong>react</strong> package contains the core React library. It includes
+    the logic for creating components, managing state, hooks, and the reconciliation
+    algorithm.
+</p>
+
+<p>
+    The <strong>react-dom</strong> package is responsible for rendering React
+    components into the browser DOM.
+</p>
+
+<hr />
+
+<h4>1. What does react-dom actually do?</h4>
+
+<p>
+    react-dom connects React to the browser environment. It provides methods
+    that allow React elements to be rendered into real DOM nodes.
+</p>
+
+<pre><code>
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+
+const root = ReactDOM.createRoot(
+    document.getElementById("root")
+);
+
+root.render(&lt;App /&gt;);
+</code></pre>
+
+<p>
+    Here, <code>createRoot</code> and <code>render</code> come from react-dom.
+    React itself does not know anything about the browser DOM.
+</p>
+
+<hr />
+
+<h4>2. Why is react-dom separate from react?</h4>
+
+<ul>
+    <li>React core is platform-independent.</li>
+    <li>Different platforms have different renderers.</li>
+    <li>This separation keeps React flexible and reusable.</li>
+</ul>
+
+<p>
+    For example:
+</p>
+
+<ul>
+    <li><strong>react-dom</strong> renders to the browser DOM</li>
+    <li><strong>react-native</strong> renders to native mobile components</li>
+    <li><strong>react-three-fiber</strong> renders to WebGL</li>
+</ul>
+
+<p>
+    Because React is separated from the rendering layer, it can work across
+    multiple platforms without changing its core logic.
+</p>
+
+<hr />
+
+<h4>3. Interview-level understanding</h4>
+
+<p>
+    React handles the virtual DOM and reconciliation logic, while react-dom
+    handles updating the real browser DOM.
+</p>
+
+<p>
+    This separation follows the renderer pattern - React defines what should
+    happen, and react-dom defines how it gets applied in the browser.
+</p>
+
+<hr />
+
+<h4>4. One-line summary</h4>
+
+<p>
+    react contains the core UI logic and reconciliation engine, while react-dom
+    is the browser-specific renderer that mounts and updates components in the DOM.
+</p>
+`,
         },
-        { id: "core-040", q: "What is ReactDOMServer used for?", a: "" },
+
+        {
+            id: "core-040",
+            q: "What is ReactDOMServer used for?",
+            a: `
+<p>
+    <strong>ReactDOMServer</strong> is used for <strong>server-side rendering - SSR</strong>
+    in React applications. It allows React components to be rendered into
+    HTML strings on the server instead of the browser.
+</p>
+
+<p>
+    Instead of sending an empty HTML file and letting JavaScript build the UI
+    in the browser, the server sends already-rendered HTML.
+</p>
+
+<hr />
+
+<h4>1. Why use ReactDOMServer?</h4>
+
+<ul>
+    <li>Better SEO - search engines can read fully rendered HTML</li>
+    <li>Faster first contentful paint - quicker initial load perception</li>
+    <li>Improved performance on slower devices</li>
+</ul>
+
+<hr />
+
+<h4>2. Common ReactDOMServer methods</h4>
+
+<p>
+    ReactDOMServer provides methods like:
+</p>
+
+<pre><code>
+import ReactDOMServer from "react-dom/server";
+
+const htmlString = ReactDOMServer.renderToString(&lt;App /&gt;);
+</code></pre>
+
+<p>
+    This converts a React component tree into an HTML string.
+</p>
+
+<hr />
+
+<h4>3. renderToString vs renderToStaticMarkup</h4>
+
+<ul>
+    <li>
+        <strong>renderToString</strong> - includes extra React attributes
+        required for hydration on the client
+    </li>
+    <li>
+        <strong>renderToStaticMarkup</strong> - generates plain HTML without
+        React-specific data attributes
+    </li>
+</ul>
+
+<hr />
+
+<h4>4. Hydration - important concept</h4>
+
+<p>
+    After server rendering, the browser loads JavaScript and React
+    attaches event listeners to the existing HTML. This process is called
+    <strong>hydration</strong>.
+</p>
+
+<pre><code>
+import { hydrateRoot } from "react-dom/client";
+
+hydrateRoot(document.getElementById("root"), &lt;App /&gt;);
+</code></pre>
+
+<p>
+    Hydration makes the static HTML interactive again.
+</p>
+
+<hr />
+
+<h4>5. Modern usage</h4>
+
+<p>
+    In real-world projects, developers usually do not call ReactDOMServer
+    manually. Frameworks like Next.js and Remix handle server rendering internally.
+</p>
+
+<hr />
+
+<h4>Interview-ready summary</h4>
+
+<ul>
+    <li>ReactDOMServer renders React components to HTML on the server</li>
+    <li>Used for SSR - SEO and performance improvements</li>
+    <li>Works together with hydration on the client</li>
+    <li>Common in frameworks like Next.js</li>
+</ul>
+
+<p>
+    In short, ReactDOMServer enables server-side rendering by converting
+    React components into HTML strings before they reach the browser.
+</p>
+`,
+        },
+
         {
             id: "core-041",
             q: "How to use innerHTML in React safely?",
-            a: "",
+            a: `
+<p>
+    In React, you should never directly use <code>element.innerHTML</code>
+    like you would in plain JavaScript. React provides a special prop called
+    <strong>dangerouslySetInnerHTML</strong> for rendering raw HTML.
+</p>
+
+<p>
+    It is called "dangerous" because inserting raw HTML can expose your
+    application to <strong>XSS - Cross Site Scripting</strong> attacks.
+</p>
+
+<hr />
+
+<h4>1. Basic usage of dangerouslySetInnerHTML</h4>
+
+<p>
+    To render HTML content, you must pass an object with a property named
+    <code>__html</code>.
+</p>
+
+<pre><code>
+function Content({ html }) {
+    return (
+        &lt;div
+            dangerouslySetInnerHTML={{ __html: html }}
+        /&gt;
+    );
+}
+</code></pre>
+
+<p>
+    React requires the object wrapper intentionally to make you aware
+    that you are injecting raw HTML.
+</p>
+
+<hr />
+
+<h4>2. Why is it dangerous?</h4>
+
+<p>
+    If the HTML string comes from user input or an untrusted API,
+    it may contain malicious scripts.
+</p>
+
+<pre><code>
+const html = "&lt;img src=x onerror=alert('Hacked') /&gt;";
+</code></pre>
+
+<p>
+    If injected directly, this could execute JavaScript inside the browser.
+    That is an XSS vulnerability.
+</p>
+
+<hr />
+
+<h4>3. How to use it safely</h4>
+
+<ul>
+    <li>Never inject raw user input directly</li>
+    <li>Sanitize the HTML before rendering</li>
+    <li>Use a trusted sanitization library like DOMPurify</li>
+</ul>
+
+<pre><code>
+import DOMPurify from "dompurify";
+
+function SafeContent({ html }) {
+    const clean = DOMPurify.sanitize(html);
+
+    return (
+        &lt;div dangerouslySetInnerHTML={{ __html: clean }} /&gt;
+    );
+}
+</code></pre>
+
+<p>
+    Sanitization removes dangerous scripts and attributes.
+</p>
+
+<hr />
+
+<h4>4. When should you use it?</h4>
+
+<ul>
+    <li>Rendering CMS content</li>
+    <li>Rendering markdown converted to HTML</li>
+    <li>Displaying formatted rich text from trusted sources</li>
+</ul>
+
+<p>
+    In most normal UI cases, you should avoid it and use JSX instead.
+</p>
+
+<hr />
+
+<h4>5. Interview-ready summary</h4>
+
+<ul>
+    <li>React does not allow direct innerHTML usage</li>
+    <li>Use dangerouslySetInnerHTML with an object containing __html</li>
+    <li>It can cause XSS vulnerabilities</li>
+    <li>Always sanitize untrusted HTML before rendering</li>
+</ul>
+
+<p>
+    The safest rule is - avoid raw HTML unless absolutely necessary,
+    and sanitize everything that comes from outside your control.
+</p>
+`,
         },
+
         {
             id: "core-042",
             q: "How do you style components in React? Common approaches.",
-            a: "",
+            a: `
+<p>
+    In React, styling components can be done in multiple ways depending on
+    project size, team preference, and scalability needs.
+    React itself does not enforce any styling method, so you can choose
+    what fits your architecture.
+</p>
+
+<hr />
+
+<h4>1. Plain CSS (traditional approach)</h4>
+
+<p>
+    The simplest way is using regular CSS files and importing them into
+    your component.
+</p>
+
+<pre><code>
+import "./button.css";
+
+function Button() {
+    return &lt;button className="btn"&gt;Click&lt;/button&gt;;
+}
+</code></pre>
+
+<p>
+    This works well for small projects but can lead to global namespace
+    conflicts in larger applications.
+</p>
+
+<hr />
+
+<h4>2. CSS Modules</h4>
+
+<p>
+    CSS Modules scope styles locally to the component and avoid class
+    name collisions.
+</p>
+
+<pre><code>
+import styles from "./Button.module.css";
+
+function Button() {
+    return &lt;button className={styles.btn}&gt;Click&lt;/button&gt;;
+}
+</code></pre>
+
+<p>
+    The class names are automatically generated and isolated.
+</p>
+
+<hr />
+
+<h4>3. Inline styles</h4>
+
+<p>
+    You can pass a JavaScript object directly to the style prop.
+</p>
+
+<pre><code>
+function Button() {
+    return (
+        &lt;button style={{ backgroundColor: "black", color: "white" }}&gt;
+            Click
+        &lt;/button&gt;
+    );
+}
+</code></pre>
+
+<p>
+    Inline styles are useful for dynamic values but do not support
+    pseudo-classes like :hover or media queries.
+</p>
+
+<hr />
+
+<h4>4. Styled-components (CSS-in-JS)</h4>
+
+<p>
+    Styled-components allow writing actual CSS inside JavaScript and
+    create scoped, reusable styled components.
+</p>
+
+<pre><code>
+import styled from "styled-components";
+
+const Button = styled.button\`
+    background: black;
+    color: white;
+    padding: 8px 16px;
+\`;
+
+function App() {
+    return &lt;Button&gt;Click&lt;/Button&gt;;
+}
+</code></pre>
+
+<p>
+    This approach keeps styles close to the component and supports
+    dynamic props and theming.
+</p>
+
+<hr />
+
+<h4>5. Utility-first frameworks (Tailwind CSS)</h4>
+
+<p>
+    Utility-first libraries like Tailwind apply styles directly using
+    predefined class utilities.
+</p>
+
+<pre><code>
+function Button() {
+    return &lt;button className="bg-black text-white px-4 py-2"&gt;Click&lt;/button&gt;;
+}
+</code></pre>
+
+<p>
+    This avoids writing custom CSS but can make JSX look crowded.
+</p>
+
+<hr />
+
+<h4>6. UI Component Libraries</h4>
+
+<p>
+    Libraries like Material UI, Ant Design, and Chakra UI provide
+    pre-styled components that you can customize.
+</p>
+
+<p>
+    These are useful for building dashboards and enterprise apps quickly.
+</p>
+
+<hr />
+
+<h4>Interview-ready summary</h4>
+
+<ul>
+    <li>React supports multiple styling approaches</li>
+    <li>Plain CSS and CSS Modules are simple and effective</li>
+    <li>Inline styles are good for dynamic values</li>
+    <li>Styled-components allow scoped and dynamic styling</li>
+    <li>Utility frameworks and UI libraries speed up development</li>
+</ul>
+
+<p>
+    In real-world projects, CSS Modules, styled-components, or Tailwind
+    are commonly used depending on the team's architecture decisions.
+</p>
+`,
         },
+
         {
             id: "core-043",
-            q: "How are events ‘different’ in React under the hood?",
-            a: "",
+            q: "How are events 'different' in React under the hood?",
+            a: `
+<p>
+    Events in React are not attached directly to DOM elements the same way
+    as native JavaScript events. React uses a system called the
+    <strong>Synthetic Event System</strong> to handle events consistently
+    across browsers.
+</p>
+
+<hr />
+
+<h4>1. Synthetic Events instead of native DOM events</h4>
+
+<p>
+    In normal JavaScript, events come directly from the browser:
+</p>
+
+<pre><code>
+button.addEventListener("click", handler);
+</code></pre>
+
+<p>
+    In React, when you write:
+</p>
+
+<pre><code>
+&lt;button onClick={handleClick}&gt;Click&lt;/button&gt;
+</code></pre>
+
+<p>
+    React wraps the native browser event inside a
+    <strong>SyntheticEvent</strong> object.
+    This object normalizes event behavior across different browsers.
+</p>
+
+<hr />
+
+<h4>2. Event delegation at the root</h4>
+
+<p>
+    React does not attach separate event listeners to every DOM node.
+    Instead, it attaches a single listener at the root and uses
+    <strong>event delegation</strong>.
+</p>
+
+<ul>
+    <li>One top-level listener per event type</li>
+    <li>React determines which component should handle it</li>
+    <li>This improves performance for large trees</li>
+</ul>
+
+<p>
+    This is why React event handling is efficient even with many components.
+</p>
+
+<hr />
+
+<h4>3. Consistent cross-browser behavior</h4>
+
+<p>
+    Different browsers historically handled events differently.
+    React's SyntheticEvent ensures properties like:
+</p>
+
+<ul>
+    <li>event.target</li>
+    <li>event.preventDefault()</li>
+    <li>event.stopPropagation()</li>
+</ul>
+
+<p>
+    behave consistently everywhere.
+</p>
+
+<hr />
+
+<h4>4. Event pooling - historical note</h4>
+
+<p>
+    In older versions of React, SyntheticEvent objects were pooled and reused
+    for performance reasons. This meant you could not access event properties
+    asynchronously without calling <code>event.persist()</code>.
+</p>
+
+<p>
+    In modern React versions, event pooling has been removed,
+    so this is no longer an issue.
+</p>
+
+<hr />
+
+<h4>5. Key differences from native events</h4>
+
+<ul>
+    <li>Uses SyntheticEvent wrapper</li>
+    <li>Uses root-level event delegation</li>
+    <li>Normalizes behavior across browsers</li>
+    <li>Modern React no longer pools events</li>
+</ul>
+
+<hr />
+
+<h4>Interview-ready summary</h4>
+
+<p>
+    React events are handled using a SyntheticEvent system that wraps
+    native DOM events, uses event delegation at the root for performance,
+    and normalizes behavior across browsers. This makes event handling
+    consistent and efficient compared to direct DOM listeners.
+</p>
+`,
         },
+
         {
             id: "core-044",
             q: "What problems happen when you use array index as key?",
-            a: "",
+            a: `
+<p>
+    In React, the <strong>key</strong> prop helps React identify which items
+    in a list have changed, been added, or removed.
+</p>
+
+<p>
+    Using the <strong>array index as key</strong> may seem harmless, but it can
+    cause subtle UI bugs when the list order changes.
+</p>
+
+<hr />
+
+<h4>1. Wrong component reuse after reordering</h4>
+
+<p>
+    React uses keys to match previous elements with new ones during reconciliation.
+    If you use the index as key and reorder the list, React may reuse the wrong
+    component instance.
+</p>
+
+<pre><code>
+{items.map((item, index) => (
+    &lt;ListItem key={index} value={item} /&gt;
+))}
+</code></pre>
+
+<p>
+    If an item moves from position 3 to position 1, its key changes from 3 to 1.
+    React thinks it is a completely different item.
+</p>
+
+<hr />
+
+<h4>2. Input state bugs</h4>
+
+<p>
+    This becomes very visible with controlled inputs inside lists.
+    When items are inserted or removed, input values may appear to
+    "jump" to the wrong row.
+</p>
+
+<ul>
+    <li>Typing in one input updates another</li>
+    <li>Focus suddenly shifts</li>
+    <li>Checkbox states mix up</li>
+</ul>
+
+<hr />
+
+<h4>3. Performance degradation</h4>
+
+<p>
+    React may re-render more items than necessary because it cannot
+    properly track which items are stable.
+</p>
+
+<p>
+    Stable unique keys allow React to minimize DOM operations.
+</p>
+
+<hr />
+
+<h4>4. When is index safe to use?</h4>
+
+<p>
+    Using index as key is acceptable only when:
+</p>
+
+<ul>
+    <li>The list is static</li>
+    <li>Items are never reordered</li>
+    <li>Items are never inserted or removed</li>
+</ul>
+
+<p>
+    In real-world apps, those conditions are rarely guaranteed.
+</p>
+
+<hr />
+
+<h4>Better approach</h4>
+
+<p>
+    Always use a stable unique identifier:
+</p>
+
+<pre><code>
+{items.map((item) => (
+    &lt;ListItem key={item.id} value={item} /&gt;
+))}
+</code></pre>
+
+<hr />
+
+<h4>Interview-ready summary</h4>
+
+<ul>
+    <li>Index as key breaks React's reconciliation when list order changes</li>
+    <li>Can cause incorrect component reuse</li>
+    <li>Leads to input state and UI bugs</li>
+    <li>Only safe for static, non-changing lists</li>
+</ul>
+
+<p>
+    In production apps, always prefer a stable unique key over array index.
+</p>
+`,
         },
+
         {
             id: "core-045",
             q: "Ways to conditionally render UI in React?",
-            a: "",
+            a: `
+<p>
+    In React, conditional rendering means showing different UI elements
+    depending on state, props, or any logical condition.
+</p>
+
+<p>
+    Since JSX is just JavaScript, we can use normal JS logic inside it.
+</p>
+
+<hr />
+
+<h4>1. if statement (outside JSX)</h4>
+
+<p>
+    Useful when rendering completely different UI blocks.
+</p>
+
+<pre><code>
+function Greeting({ isLoggedIn }) {
+    if (isLoggedIn) {
+        return &lt;h2&gt;Welcome back!&lt;/h2&gt;;
+    }
+
+    return &lt;h2&gt;Please sign in.&lt;/h2&gt;;
+}
+</code></pre>
+
+<p>
+    This approach is clean when logic is large or when returning early.
+</p>
+
+<hr />
+
+<h4>2. Ternary operator - condition ? A : B</h4>
+
+<p>
+    Most common way to render one of two UI elements.
+</p>
+
+<pre><code>
+{isLoggedIn ? &lt;Dashboard /&gt; : &lt;Login /&gt;}
+</code></pre>
+
+<p>
+    Best for short inline conditions.
+</p>
+
+<hr />
+
+<h4>3. Logical AND - condition && UI</h4>
+
+<p>
+    Useful when you only want to render something if the condition is true.
+</p>
+
+<pre><code>
+{isAdmin && &lt;button&gt;Delete&lt;/button&gt;}
+</code></pre>
+
+<p>
+    Important - if the left side evaluates to 0, React will render 0.
+    So be careful with numeric conditions.
+</p>
+
+<hr />
+
+<h4>4. Logical OR - fallback rendering</h4>
+
+<pre><code>
+{username || "Guest"}
+</code></pre>
+
+<p>
+    This renders a fallback value if the left side is falsy.
+</p>
+
+<hr />
+
+<h4>5. Using variables to store JSX</h4>
+
+<p>
+    You can assign JSX to a variable before returning.
+</p>
+
+<pre><code>
+let content;
+
+if (isLoading) {
+    content = &lt;Spinner /&gt;;
+} else {
+    content = &lt;Profile /&gt;;
+}
+
+return &lt;div&gt;{content}&lt;/div&gt;;
+</code></pre>
+
+<hr />
+
+<h4>6. Immediately Invoked Function Expression - IIFE</h4>
+
+<p>
+    Useful when more complex logic is needed inside JSX.
+</p>
+
+<pre><code>
+{
+    (() =&gt; {
+        if (role === "admin") return &lt;AdminPanel /&gt;;
+        if (role === "user") return &lt;UserPanel /&gt;;
+        return &lt;GuestPanel /&gt;;
+    })()
+}
+</code></pre>
+
+<hr />
+
+<h4>7. Switch statement</h4>
+
+<pre><code>
+switch (status) {
+    case "success":
+        return &lt;Success /&gt;;
+    case "error":
+        return &lt;Error /&gt;;
+    default:
+        return &lt;Loading /&gt;;
+}
+</code></pre>
+
+<p>
+    Good when multiple conditions exist.
+</p>
+
+<hr />
+
+<h4>8. Rendering null to hide UI</h4>
+
+<pre><code>
+if (!isVisible) return null;
+</code></pre>
+
+<p>
+    Returning null means render nothing.
+</p>
+
+<hr />
+
+<h4>Common mistakes</h4>
+
+<ul>
+    <li>Using complex nested ternaries - reduces readability</li>
+    <li>Using index as key while conditionally rendering lists</li>
+    <li>Forgetting that 0 and empty string can render</li>
+</ul>
+
+<hr />
+
+<h4>Interview-ready summary</h4>
+
+<ul>
+    <li>Use if for large blocks</li>
+    <li>Use ternary for two-way conditions</li>
+    <li>Use && for simple show or hide</li>
+    <li>Return null to render nothing</li>
+    <li>Avoid deeply nested ternaries</li>
+</ul>
+
+<p>
+    In practice, clean conditional rendering improves readability
+    and reduces unnecessary component re-renders.
+</p>
+`,
         },
+
         {
             id: "core-046",
             q: "Why is spreading props on DOM elements risky?",
-            a: "",
+            a: `
+<p>
+    Spreading props on DOM elements using <code>{...props}</code> can be convenient,
+    but it can also introduce subtle bugs and unexpected behavior if not used carefully.
+</p>
+
+<hr />
+
+<h4>1. Unknown or invalid DOM attributes</h4>
+
+<p>
+    When you spread all props directly onto a DOM element, you might accidentally
+    pass props that are not valid HTML attributes.
+</p>
+
+<pre><code>
+function Button(props) {
+    return &lt;button {...props}&gt;Click&lt;/button&gt;;
+}
+</code></pre>
+
+<p>
+    If someone passes a custom prop like <code>isPrimary</code>, it will also be
+    forwarded to the DOM:
+</p>
+
+<pre><code>
+&lt;Button isPrimary={true} /&gt;
+</code></pre>
+
+<p>
+    This can cause React warnings or unexpected attributes in the rendered HTML.
+</p>
+
+<hr />
+
+<h4>2. Leaking internal implementation details</h4>
+
+<p>
+    Sometimes components accept internal-only props that should not reach the DOM.
+    Spreading blindly makes it harder to control what actually gets rendered.
+</p>
+
+<p>
+    This reduces clarity and makes the component less predictable.
+</p>
+
+<hr />
+
+<h4>3. Overriding important attributes accidentally</h4>
+
+<p>
+    Spread order matters. If you mix explicit props and spread props,
+    you can unintentionally override values.
+</p>
+
+<pre><code>
+&lt;button type="button" {...props}&gt;
+</code></pre>
+
+<p>
+    If <code>props</code> contains <code>type="submit"</code>, it will override
+    your intended value.
+</p>
+
+<hr />
+
+<h4>4. Security concerns in some cases</h4>
+
+<p>
+    If untrusted data is spread into a DOM element, it may introduce unwanted
+    attributes like event handlers or malformed data.
+</p>
+
+<p>
+    While React escapes text content by default, blindly forwarding props
+    increases the surface area for mistakes.
+</p>
+
+<hr />
+
+<h4>5. Better pattern - explicit destructuring</h4>
+
+<p>
+    A safer approach is to destructure known props and forward only the rest
+    intentionally.
+</p>
+
+<pre><code>
+function Button({ isPrimary, ...rest }) {
+    return &lt;button {...rest}&gt;Click&lt;/button&gt;;
+}
+</code></pre>
+
+<p>
+    This way, internal props stay internal, and only valid DOM props are forwarded.
+</p>
+
+<hr />
+
+<h4>Interview-ready summary</h4>
+
+<ul>
+    <li>Spreading props may pass invalid HTML attributes to the DOM</li>
+    <li>It can leak internal component props</li>
+    <li>Spread order can override important attributes</li>
+    <li>Explicit destructuring is safer and clearer</li>
+</ul>
+
+<p>
+    Spreading props is powerful, but it should be used intentionally, not blindly.
+</p>
+`,
         },
+
         {
             id: "core-047",
             q: "How do you memoize things in React? (components, values, functions)",
-            a: "",
+            a: `
+<p>
+    In React, <strong>memoization</strong> is used to avoid unnecessary
+    recalculations and re-renders. It helps improve performance by
+    reusing previously computed results when inputs have not changed.
+</p>
+
+<p>
+    In React, you typically memoize three things:
+</p>
+
+<ul>
+    <li>Components</li>
+    <li>Values</li>
+    <li>Functions</li>
+</ul>
+
+<hr />
+
+<h4>1. Memoizing Components - React.memo</h4>
+
+<p>
+    <code>React.memo</code> prevents a component from re-rendering
+    if its props have not changed.
+</p>
+
+<pre><code>
+import React from "react";
+
+const UserCard = React.memo(function UserCard({ name }) {
+    console.log("Rendered");
+    return &lt;div&gt;{name}&lt;/div&gt;;
+});
+</code></pre>
+
+<p>
+    React.memo performs a shallow comparison of props.
+    If props are the same reference and values, re-render is skipped.
+</p>
+
+<p>
+    Important: If you pass new object or function references every render,
+    memo will not help.
+</p>
+
+<hr />
+
+<h4>2. Memoizing Values - useMemo</h4>
+
+<p>
+    <code>useMemo</code> is used to memoize expensive computed values.
+</p>
+
+<pre><code>
+import { useMemo } from "react";
+
+function Example({ numbers }) {
+    const total = useMemo(() => {
+        console.log("Calculating...");
+        return numbers.reduce((sum, n) => sum + n, 0);
+    }, [numbers]);
+
+    return &lt;div&gt;Total: {total}&lt;/div&gt;;
+}
+</code></pre>
+
+<p>
+    The function runs only when dependencies change.
+</p>
+
+<p>
+    Use useMemo when:
+</p>
+
+<ul>
+    <li>The computation is expensive</li>
+    <li>The value is passed to a memoized child component</li>
+</ul>
+
+<hr />
+
+<h4>3. Memoizing Functions - useCallback</h4>
+
+<p>
+    <code>useCallback</code> memoizes a function reference.
+    It is useful when passing callbacks to memoized children.
+</p>
+
+<pre><code>
+import { useCallback } from "react";
+
+function Parent() {
+    const handleClick = useCallback(() => {
+        console.log("Clicked");
+    }, []);
+
+    return &lt;Child onClick={handleClick} /&gt;;
+}
+</code></pre>
+
+<p>
+    Without useCallback, a new function would be created on every render,
+    causing memoized children to re-render.
+</p>
+
+<hr />
+
+<h4>4. React.memo vs useMemo vs useCallback</h4>
+
+<ul>
+    <li><strong>React.memo</strong> - memoizes a component</li>
+    <li><strong>useMemo</strong> - memoizes a computed value</li>
+    <li><strong>useCallback</strong> - memoizes a function</li>
+</ul>
+
+<hr />
+
+<h4>5. Important interview pitfalls</h4>
+
+<ul>
+    <li>Memoization does not automatically improve performance</li>
+    <li>Overusing useMemo and useCallback can make code harder to read</li>
+    <li>Shallow comparison means object and array references matter</li>
+    <li>Measure before optimizing</li>
+</ul>
+
+<hr />
+
+<h4>6. Interview-ready summary</h4>
+
+<ul>
+    <li>Use React.memo to prevent unnecessary component re-renders</li>
+    <li>Use useMemo to memoize expensive computed values</li>
+    <li>Use useCallback to memoize function references</li>
+    <li>Only optimize when necessary</li>
+</ul>
+
+<p>
+    Memoization in React is about controlling re-renders and avoiding
+    unnecessary work, but it should be used thoughtfully, not blindly.
+</p>
+`,
         },
+
         {
             id: "core-048",
             q: "Server-side rendering (SSR): how does it work in React?",
-            a: "",
+            a: `
+<p>
+    <strong>Server-side rendering - SSR</strong> is a technique where React
+    renders the initial HTML on the <strong>server</strong> instead of in the
+    browser. The fully rendered HTML is sent to the client, and then React
+    "hydrates" it to make it interactive.
+</p>
+
+<hr />
+
+<h4>1. How SSR works step by step</h4>
+
+<ul>
+    <li>User requests a page from the server</li>
+    <li>The server runs React code and renders the component tree to HTML</li>
+    <li>The server sends that HTML to the browser</li>
+    <li>The browser displays the HTML immediately</li>
+    <li>React JavaScript loads and attaches event listeners - this is called hydration</li>
+</ul>
+
+<p>
+    After hydration, the app behaves like a normal React application.
+</p>
+
+<hr />
+
+<h4>2. What does React use for SSR?</h4>
+
+<p>
+    React provides APIs like <code>renderToString</code> and
+    <code>renderToPipeableStream</code> from <code>react-dom/server</code>.
+</p>
+
+<pre><code>
+import { renderToString } from "react-dom/server";
+import App from "./App";
+
+const html = renderToString(&lt;App /&gt;);
+</code></pre>
+
+<p>
+    Frameworks like <strong>Next.js</strong> handle this process automatically.
+</p>
+
+<hr />
+
+<h4>3. Hydration - important concept</h4>
+
+<p>
+    Hydration means React attaches event listeners to the already-rendered HTML.
+    Instead of re-rendering everything from scratch, React reuses the server HTML
+    and makes it interactive.
+</p>
+
+<hr />
+
+<h4>4. Advantages of SSR</h4>
+
+<ul>
+    <li>Better SEO - search engines receive complete HTML</li>
+    <li>Faster initial content display</li>
+    <li>Improved performance perception for users</li>
+</ul>
+
+<hr />
+
+<h4>5. Limitations and trade-offs</h4>
+
+<ul>
+    <li>More complex setup</li>
+    <li>Server load increases</li>
+    <li>Hydration mismatch errors can occur if server and client output differ</li>
+</ul>
+
+<p>
+    A hydration mismatch happens when the HTML rendered on the server does not
+    match what React expects on the client.
+</p>
+
+<hr />
+
+<h4>6. Interview-ready summary</h4>
+
+<ul>
+    <li>SSR renders HTML on the server instead of the browser</li>
+    <li>The browser receives ready-to-display HTML</li>
+    <li>React hydrates the markup to add interactivity</li>
+    <li>Used for SEO and faster initial load</li>
+</ul>
+
+<p>
+    In real-world projects, SSR is usually handled by frameworks like Next.js
+    rather than implemented manually.
+</p>
+`,
         },
+
         {
             id: "core-049",
             q: "How do you enable production mode and why does it matter?",
-            a: "",
+            a: `
+<p>
+    Production mode in React is enabled when you build your application
+    using a production build command. In production mode, React removes
+    development-only checks, warnings, and extra debugging code.
+</p>
+
+<hr />
+
+<h4>1. How to enable production mode</h4>
+
+<p>
+    In modern React projects using Vite, Create React App, or similar tools,
+    production mode is automatically enabled when you run the build command.
+</p>
+
+<pre><code>
+npm run build
+</code></pre>
+
+<p>
+    This generates an optimized production bundle. When deployed,
+    React runs in production mode automatically.
+</p>
+
+<hr />
+
+<h4>2. What changes in production mode</h4>
+
+<ul>
+    <li>Development warnings are removed</li>
+    <li>Extra validation logic is stripped out</li>
+    <li>Code is minified and optimized</li>
+    <li>Smaller bundle size</li>
+    <li>Faster rendering performance</li>
+</ul>
+
+<p>
+    For example, PropTypes validation and detailed error messages
+    only run in development mode.
+</p>
+
+<hr />
+
+<h4>3. Why it matters</h4>
+
+<p>
+    Running React in development mode in production can significantly
+    slow down your app because React performs additional checks to
+    help developers debug issues.
+</p>
+
+<p>
+    Production mode ensures:
+</p>
+
+<ul>
+    <li>Better performance</li>
+    <li>Smaller JavaScript bundle</li>
+    <li>No unnecessary console warnings</li>
+    <li>Cleaner user experience</li>
+</ul>
+
+<hr />
+
+<h4>4. Important interview point</h4>
+
+<p>
+    You do not manually toggle production mode in React code.
+    It is controlled by the build tool and the NODE_ENV value
+    during bundling.
+</p>
+
+<hr />
+
+<h4>Interview-ready summary</h4>
+
+<ul>
+    <li>Production mode is enabled via the build command</li>
+    <li>It removes development checks and warnings</li>
+    <li>It reduces bundle size and improves performance</li>
+    <li>You should always deploy a production build</li>
+</ul>
+
+<p>
+    In real projects, you never deploy the development server.
+    Always build and deploy the optimized production bundle.
+</p>
+`,
         },
+
         {
             id: "core-050",
-            q: "Do hooks replace HOCs and render props fully? What’s the real answer?",
-            a: "",
+            q: "Do hooks replace HOCs and render props fully? What's the real answer?",
+            a: `
+<p>
+    Hooks changed how we share logic in React, but they did not magically
+    delete Higher-Order Components HOCs or render props from existence.
+    The real answer is more nuanced.
+</p>
+
+<hr />
+
+<h4>1. What problem were HOCs and render props solving?</h4>
+
+<p>
+    Before hooks, functional components had no state or lifecycle.
+    So we needed patterns to reuse logic between components.
+</p>
+
+<ul>
+    <li>HOCs wrapped components to inject props</li>
+    <li>Render props passed a function to share dynamic logic</li>
+</ul>
+
+<p>
+    Both patterns allowed logic reuse, but often made component trees
+    harder to read and reason about.
+</p>
+
+<hr />
+
+<h4>2. What hooks improved</h4>
+
+<p>
+    Hooks allow logic reuse without changing component hierarchy.
+    You extract shared logic into a custom hook instead of wrapping components.
+</p>
+
+<pre><code>
+function useWindowWidth() {
+    const [width, setWidth] = React.useState(window.innerWidth);
+
+    React.useEffect(() => {
+        const handleResize = () => setWidth(window.innerWidth);
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    return width;
+}
+</code></pre>
+
+<p>
+    Now any component can reuse this logic without extra wrappers.
+</p>
+
+<hr />
+
+<h4>3. Do hooks fully replace HOCs?</h4>
+
+<p>
+    In most new codebases, yes for logic reuse.
+</p>
+
+<p>
+    However, HOCs are still useful in some scenarios:
+</p>
+
+<ul>
+    <li>Library-level APIs where wrapping components is intentional</li>
+    <li>Decorating components with additional behavior</li>
+    <li>Backward compatibility in older projects</li>
+</ul>
+
+<hr />
+
+<h4>4. Do hooks fully replace render props?</h4>
+
+<p>
+    For sharing stateful logic, hooks are generally cleaner and preferred.
+</p>
+
+<p>
+    But render props are still valid when:
+</p>
+
+<ul>
+    <li>You need dynamic rendering controlled by the consumer</li>
+    <li>You want explicit inversion of control via a function</li>
+</ul>
+
+<hr />
+
+<h4>5. Important limitation</h4>
+
+<p>
+    Hooks only work inside function components and custom hooks.
+    They cannot be used inside class components.
+</p>
+
+<p>
+    So in legacy class-based systems, HOCs still matter.
+</p>
+
+<hr />
+
+<h4>6. The real interview-ready answer</h4>
+
+<ul>
+    <li>Hooks replaced most use cases of HOCs and render props for logic reuse</li>
+    <li>They simplify component trees and improve readability</li>
+    <li>HOCs and render props are still valid patterns, not obsolete</li>
+    <li>Modern React code prefers custom hooks</li>
+</ul>
+
+<p>
+    So the real answer is not "hooks killed HOCs".
+    The real answer is that hooks made logic reuse simpler and more ergonomic,
+    but older patterns still have niche and legacy relevance.
+</p>
+`,
         },
+
         {
             id: "core-051",
             q: "What is a switching component pattern?",
-            a: "",
+            a: `
+<p>
+    The <strong>switching component pattern</strong> is a React pattern where a single
+    component decides which UI to render based on a condition, type, or state value.
+</p>
+
+<p>
+    Instead of scattering conditional logic across multiple places, the switching
+    component centralizes the decision of <em>which component should be rendered</em>.
+</p>
+
+<hr />
+
+<h4>1. Basic idea</h4>
+
+<p>
+    A switching component typically receives a <code>type</code> or <code>variant</code>
+    prop and renders different components depending on that value.
+</p>
+
+<pre><code>
+function StatusMessage({ status }) {
+    switch (status) {
+        case "loading":
+            return &lt;LoadingSpinner /&gt;;
+        case "error":
+            return &lt;ErrorMessage /&gt;;
+        case "success":
+            return &lt;SuccessMessage /&gt;;
+        default:
+            return null;
+    }
+}
+</code></pre>
+
+<p>
+    Here, <code>StatusMessage</code> acts as a switching component.
+</p>
+
+<hr />
+
+<h4>2. Object map variation - cleaner for scalability</h4>
+
+<p>
+    Instead of using <code>switch</code>, you can use a mapping object.
+</p>
+
+<pre><code>
+const components = {
+    loading: LoadingSpinner,
+    error: ErrorMessage,
+    success: SuccessMessage
+};
+
+function StatusMessage({ status }) {
+    const Component = components[status];
+    return Component ? &lt;Component /&gt; : null;
+}
+</code></pre>
+
+<p>
+    This approach avoids long switch statements and scales better.
+</p>
+
+<hr />
+
+<h4>3. When is this useful?</h4>
+
+<ul>
+    <li>Rendering different layouts based on user role</li>
+    <li>Handling UI states - loading, error, empty, success</li>
+    <li>Rendering different form types based on config</li>
+    <li>Feature flags and conditional UI branches</li>
+</ul>
+
+<hr />
+
+<h4>4. Why it is considered a pattern</h4>
+
+<p>
+    It improves:
+</p>
+
+<ul>
+    <li>Separation of concerns</li>
+    <li>Readability</li>
+    <li>Maintainability</li>
+    <li>Extensibility when new variants are added</li>
+</ul>
+
+<p>
+    Instead of deeply nested ternaries inside JSX, the switching logic stays isolated.
+</p>
+
+<hr />
+
+<h4>5. Common mistake</h4>
+
+<ul>
+    <li>Putting heavy logic inside the switch block</li>
+    <li>Making the switching component too large</li>
+    <li>Not handling a default case</li>
+</ul>
+
+<hr />
+
+<h4>Interview-ready summary</h4>
+
+<ul>
+    <li>A switching component renders different components based on a condition</li>
+    <li>It centralizes UI branching logic</li>
+    <li>It improves maintainability compared to nested conditionals</li>
+    <li>Often implemented using switch or object mapping</li>
+</ul>
+
+<p>
+    In real-world apps, switching components are commonly used for handling
+    UI states and role-based rendering cleanly.
+</p>
+`,
         },
+
         {
             id: "core-052",
             q: "What are mixins and why are they basically dead in React?",
-            a: "",
+            a: `
+<p>
+    <strong>Mixins</strong> were a way to share reusable behavior between multiple
+    components in early React - especially when using <strong>createClass</strong>.
+    They allowed you to inject lifecycle methods and logic into different components.
+</p>
+
+<hr />
+
+<h4>1. What problem were mixins trying to solve?</h4>
+
+<p>
+    Before hooks and modern composition patterns, developers needed a way to
+    reuse logic like subscriptions, timers, or common state behavior across
+    multiple components.
+</p>
+
+<pre><code>
+const TimerMixin = {
+    componentDidMount() {
+        this.timer = setInterval(() =&gt; {
+            console.log("tick");
+        }, 1000);
+    },
+    componentWillUnmount() {
+        clearInterval(this.timer);
+    }
+};
+
+const MyComponent = React.createClass({
+    mixins: [TimerMixin],
+    render() {
+        return &lt;div&gt;Timer running&lt;/div&gt;;
+    }
+});
+</code></pre>
+
+<p>
+    The mixin automatically merged its lifecycle methods into the component.
+</p>
+
+<hr />
+
+<h4>2. Why were mixins problematic?</h4>
+
+<ul>
+    <li>Implicit dependencies - hard to see where behavior was coming from</li>
+    <li>Name collisions between lifecycle methods</li>
+    <li>Harder debugging and reasoning about data flow</li>
+    <li>Hidden coupling between components</li>
+</ul>
+
+<p>
+    If two mixins defined the same lifecycle method, React merged them in ways
+    that were not always obvious.
+</p>
+
+<hr />
+
+<h4>3. Why are mixins basically dead?</h4>
+
+<p>
+    React moved away from <strong>createClass</strong> and introduced
+    <strong>ES6 class components</strong>, which did not support mixins.
+</p>
+
+<p>
+    Later, React introduced better patterns for logic reuse:
+</p>
+
+<ul>
+    <li>Higher-Order Components - HOCs</li>
+    <li>Render Props</li>
+    <li>Custom Hooks - the modern standard</li>
+</ul>
+
+<hr />
+
+<h4>4. Modern replacement - Custom Hooks</h4>
+
+<pre><code>
+function useTimer() {
+    useEffect(() =&gt; {
+        const id = setInterval(() =&gt; {
+            console.log("tick");
+        }, 1000);
+        return () =&gt; clearInterval(id);
+    }, []);
+}
+</code></pre>
+
+<p>
+    Hooks are explicit, composable, and easier to reason about compared to mixins.
+</p>
+
+<hr />
+
+<h4>Interview-ready summary</h4>
+
+<ul>
+    <li>Mixins were used in createClass to share reusable logic</li>
+    <li>They caused hidden dependencies and name collisions</li>
+    <li>Not supported in ES6 class components</li>
+    <li>Replaced by HOCs, render props, and now custom hooks</li>
+</ul>
+
+<p>
+    In modern React, mixins are obsolete and should not be used.
+</p>
+`,
         },
+
         {
             id: "core-053",
-            q: "Pointer events in React: what’s supported?",
-            a: "",
+            q: "Pointer events in React: what's supported?",
+            a: `
+<p>
+    React supports <strong>Pointer Events</strong> as part of its synthetic event system.
+    Pointer events unify mouse, touch, and pen input into a single event model.
+</p>
+
+<p>
+    Instead of handling separate mouse and touch events, pointer events allow
+    you to write one consistent handler that works across devices.
+</p>
+
+<hr />
+
+<h4>1. What are Pointer Events?</h4>
+
+<p>
+    Pointer events represent input from:
+</p>
+
+<ul>
+    <li>Mouse</li>
+    <li>Touch</li>
+    <li>Stylus / Pen</li>
+</ul>
+
+<p>
+    They provide additional properties like <code>pointerType</code>,
+    <code>pressure</code>, and <code>isPrimary</code>.
+</p>
+
+<hr />
+
+<h4>2. Pointer events supported in React</h4>
+
+<p>
+    React supports the following pointer event handlers:
+</p>
+
+<ul>
+    <li><code>onPointerDown</code></li>
+    <li><code>onPointerUp</code></li>
+    <li><code>onPointerMove</code></li>
+    <li><code>onPointerEnter</code></li>
+    <li><code>onPointerLeave</code></li>
+    <li><code>onPointerOver</code></li>
+    <li><code>onPointerOut</code></li>
+    <li><code>onPointerCancel</code></li>
+    <li><code>onGotPointerCapture</code></li>
+    <li><code>onLostPointerCapture</code></li>
+</ul>
+
+<hr />
+
+<h4>3. Example usage</h4>
+
+<pre><code>
+function Box() {
+    const handlePointerDown = (e) =&gt; {
+        console.log("Pointer type:", e.pointerType);
+        console.log("Pressure:", e.pressure);
+    };
+
+    return (
+        &lt;div
+            style={{ width: 200, height: 200, background: "gray" }}
+            onPointerDown={handlePointerDown}
+        &gt;
+            Press me
+        &lt;/div&gt;
+    );
+}
+</code></pre>
+
+<p>
+    The <code>pointerType</code> value can be "mouse", "touch", or "pen".
+</p>
+
+<hr />
+
+<h4>4. Why use pointer events instead of mouse and touch events?</h4>
+
+<ul>
+    <li>One unified event system for all input types</li>
+    <li>Less duplicate logic</li>
+    <li>Better support for modern devices</li>
+    <li>Provides extra data like pressure and tilt</li>
+</ul>
+
+<hr />
+
+<h4>5. Important interview notes</h4>
+
+<ul>
+    <li>Pointer events are part of React's synthetic event system</li>
+    <li>They work consistently across supported browsers</li>
+    <li>They replace the need for separate mouse and touch handlers in most cases</li>
+</ul>
+
+<hr />
+
+<h4>Interview-ready summary</h4>
+
+<p>
+    React supports pointer events such as onPointerDown, onPointerMove, and
+    onPointerUp, which unify mouse, touch, and pen input into a single API.
+    They simplify cross-device interaction handling in modern applications.
+</p>
+`,
         },
+
         {
             id: "core-054",
             q: "Why should React component names start with capital letters?",
-            a: "",
+            a: `
+<p>
+    In React, component names must start with a <strong>capital letter</strong>
+    because React uses this convention to distinguish between
+    <strong>custom components</strong> and <strong>built-in HTML elements</strong>.
+</p>
+
+<hr />
+
+<h4>1. How React differentiates elements</h4>
+
+<p>
+    When JSX is compiled, React checks the first letter of a tag:
+</p>
+
+<ul>
+    <li>Lowercase - treated as a native HTML tag like 'div', 'span', 'button'</li>
+    <li>Uppercase - treated as a React component</li>
+</ul>
+
+<pre><code>
+function MyComponent() {
+    return &lt;div&gt;Hello&lt;/div&gt;;
+}
+
+&lt;MyComponent /&gt;   // Valid - React treats it as a component
+&lt;mycomponent /&gt;   // Invalid - React treats it as a DOM tag
+</code></pre>
+
+<hr />
+
+<h4>2. What actually happens behind the scenes</h4>
+
+<p>
+    JSX is converted to 'React.createElement'. During this process:
+</p>
+
+<ul>
+    <li>'div' becomes a string - React.createElement('div')</li>
+    <li>'MyComponent' becomes a variable reference - React.createElement(MyComponent)</li>
+</ul>
+
+<p>
+    If the name starts with lowercase, React assumes it is a string
+    and tries to render it as a real DOM element.
+</p>
+
+<hr />
+
+<h4>3. Why this rule exists</h4>
+
+<ul>
+    <li>It keeps JSX parsing simple and predictable</li>
+    <li>It avoids ambiguity between DOM elements and custom components</li>
+    <li>It enforces a consistent naming convention across projects</li>
+</ul>
+
+<hr />
+
+<h4>4. Common mistake</h4>
+
+<pre><code>
+function header() {
+    return &lt;h1&gt;Title&lt;/h1&gt;;
+}
+
+&lt;header /&gt;  // React thinks this is an HTML &lt;header&gt; tag
+</code></pre>
+
+<p>
+    This will not behave as a custom component.
+    Rename it to 'Header' to fix it.
+</p>
+
+<hr />
+
+<h4>Interview-ready summary</h4>
+
+<ul>
+    <li>React treats lowercase tags as DOM elements</li>
+    <li>Uppercase names are treated as custom components</li>
+    <li>This rule is required because JSX compiles differently for strings vs variables</li>
+</ul>
+
+<p>
+    So React component names must start with a capital letter
+    to ensure they are recognized as components and not HTML tags.
+</p>
+`,
         },
+
         {
             id: "core-055",
             q: "Custom DOM attributes: are they supported? Any rules?",
-            a: "",
+            a: `
+<p>
+    Yes, React supports <strong>custom DOM attributes</strong>, but there are
+    important rules depending on whether you are passing them to
+    <strong>built-in HTML elements</strong> or <strong>custom components</strong>.
+</p>
+
+<hr />
+
+<h4>1. Custom attributes on HTML elements</h4>
+
+<p>
+    In modern React versions 16+, unknown attributes are passed directly to the DOM.
+    This means you can add custom attributes without React stripping them out.
+</p>
+
+<pre><code>
+&lt;div data-id="123" custom-attr="hello"&gt;&lt;/div&gt;
+</code></pre>
+
+<p>
+    React will render both attributes in the DOM.
+</p>
+
+<hr />
+
+<h4>2. Recommended way - use data-* attributes</h4>
+
+<p>
+    The standard and recommended approach is to use <code>data-*</code> attributes.
+    They are valid HTML and safe for storing custom metadata.
+</p>
+
+<pre><code>
+&lt;div data-user-id="42" data-role="admin"&gt;&lt;/div&gt;
+</code></pre>
+
+<p>
+    These are commonly used for testing, analytics, and storing small metadata.
+</p>
+
+<hr />
+
+<h4>3. Custom attributes on React components</h4>
+
+<p>
+    If you pass a custom prop to a React component, it will NOT automatically
+    appear in the DOM unless you explicitly forward it.
+</p>
+
+<pre><code>
+function Box(props) {
+    return &lt;div {...props}&gt;Content&lt;/div&gt;;
+}
+
+&lt;Box customAttr="test" /&gt;
+</code></pre>
+
+<p>
+    Here, <code>customAttr</code> will appear in the DOM because we spread props.
+    Without spreading, it would stay inside the component only.
+</p>
+
+<hr />
+
+<h4>4. Invalid attribute warnings</h4>
+
+<p>
+    React will warn if you pass invalid attributes that are not valid HTML and
+    not intended as custom attributes.
+</p>
+
+<ul>
+    <li>Lowercase custom attributes are passed through</li>
+    <li>Invalid known attributes may trigger warnings</li>
+</ul>
+
+<hr />
+
+<h4>5. Special cases</h4>
+
+<ul>
+    <li>Use <code>className</code> instead of class</li>
+    <li>Use <code>htmlFor</code> instead of for</li>
+    <li>Use camelCase for DOM properties like <code>tabIndex</code></li>
+</ul>
+
+<hr />
+
+<h4>Important practical rule</h4>
+
+<ul>
+    <li>Use data-* for custom metadata</li>
+    <li>Avoid random non-standard attributes unless necessary</li>
+    <li>Forward props carefully to avoid leaking unwanted attributes</li>
+</ul>
+
+<hr />
+
+<h4>Interview-ready summary</h4>
+
+<p>
+    React supports custom DOM attributes in modern versions. The recommended
+    approach is to use data-* attributes. Custom props on React components
+    must be explicitly forwarded to reach the DOM.
+</p>
+`,
         },
+
         {
             id: "core-056",
             q: "How do you loop/render lists inside JSX?",
-            a: "",
+            a: `
+<p>
+    In React, you render lists inside JSX using JavaScript array methods,
+    most commonly <strong>map()</strong>. React does not have a special
+    template loop like some frameworks. You simply use JavaScript.
+</p>
+
+<hr />
+
+<h4>1. Using map() - the standard way</h4>
+
+<p>
+    The <code>map()</code> method transforms each item in an array into
+    a React element.
+</p>
+
+<pre><code>
+function UserList() {
+    const users = ["Ash", "Ravi", "Neha"];
+
+    return (
+        &lt;ul&gt;
+            {users.map((user, index) =&gt; (
+                &lt;li key={index}&gt;{user}&lt;/li&gt;
+            ))}
+        &lt;/ul&gt;
+    );
+}
+</code></pre>
+
+<p>
+    Each iteration returns JSX, and React renders the resulting array
+    of elements.
+</p>
+
+<hr />
+
+<h4>2. Why the key prop is important</h4>
+
+<p>
+    When rendering lists, React requires a <strong>key</strong> prop.
+    Keys help React identify which items changed, were added, or removed.
+</p>
+
+<ul>
+    <li>Keys must be unique among siblings</li>
+    <li>Keys should be stable - not randomly generated</li>
+    <li>Prefer database IDs over array indexes</li>
+</ul>
+
+<pre><code>
+{users.map(user =&gt; (
+    &lt;li key={user.id}&gt;{user.name}&lt;/li&gt;
+))}
+</code></pre>
+
+<hr />
+
+<h4>3. Why index as key is not ideal</h4>
+
+<p>
+    Using array index as key can cause UI bugs if the list changes order,
+    items are inserted, or removed. React may reuse DOM nodes incorrectly.
+</p>
+
+<ul>
+    <li>Safe only for static lists</li>
+    <li>Not recommended for dynamic or sortable lists</li>
+</ul>
+
+<hr />
+
+<h4>4. Other ways to render conditionally inside lists</h4>
+
+<p>
+    You can combine <code>map()</code> with conditional rendering.
+</p>
+
+<pre><code>
+{users.map(user =&gt;
+    user.isActive ? (
+        &lt;li key={user.id}&gt;{user.name}&lt;/li&gt;
+    ) : null
+)}
+</code></pre>
+
+<p>
+    Returning <code>null</code> means nothing will be rendered.
+</p>
+
+<hr />
+
+<h4>5. Interview-ready summary</h4>
+
+<ul>
+    <li>Use map() to render lists in JSX</li>
+    <li>Always provide a stable and unique key</li>
+    <li>Avoid using index as key in dynamic lists</li>
+    <li>React uses keys for efficient reconciliation</li>
+</ul>
+
+<p>
+    In short, list rendering in React is just JavaScript array mapping,
+    but keys are critical for correct UI updates.
+</p>
+`,
         },
+
         {
             id: "core-057",
             q: "How do you access props inside JSX attribute strings correctly?",
-            a: "",
+            a: `
+<p>
+    In JSX, you access props inside attributes using <strong>curly braces { }</strong>.
+    Curly braces allow you to inject JavaScript expressions into JSX.
+</p>
+
+<hr />
+
+<h4>1. Basic usage inside attributes</h4>
+
+<p>
+    If you want to use a prop value inside an attribute, wrap it in curly braces.
+</p>
+
+<pre><code>
+function User({ name }) {
+    return &lt;h1 title={name}&gt;Hello&lt;/h1&gt;;
+}
+</code></pre>
+
+<p>
+    Here, <code>{name}</code> is evaluated as JavaScript, not a string.
+</p>
+
+<hr />
+
+<h4>2. Incorrect way - treating it like plain HTML</h4>
+
+<pre><code>
+&lt;h1 title="name"&gt;Hello&lt;/h1&gt;
+</code></pre>
+
+<p>
+    This passes the literal string "name", not the variable.
+</p>
+
+<hr />
+
+<h4>3. Mixing strings with props</h4>
+
+<p>
+    If you want to combine text and props, use template literals inside braces.
+</p>
+
+<pre><code>
+function User({ name }) {
+    return &lt;h1 title={\`User: \${name}\`}&gt;Hello&lt;/h1&gt;;
+}
+</code></pre>
+
+<p>
+    Or concatenate manually:
+</p>
+
+<pre><code>
+&lt;h1 title={"User: " + name}&gt;Hello&lt;/h1&gt;
+</code></pre>
+
+<hr />
+
+<h4>4. Boolean and non-string attributes</h4>
+
+<p>
+    For boolean attributes, you must also use curly braces.
+</p>
+
+<pre><code>
+function Button({ disabled }) {
+    return &lt;button disabled={disabled}&gt;Click&lt;/button&gt;;
+}
+</code></pre>
+
+<p>
+    JSX attributes are not plain HTML strings. They expect JavaScript values.
+</p>
+
+<hr />
+
+<h4>5. Important rule to remember</h4>
+
+<ul>
+    <li>Use double quotes for plain strings</li>
+    <li>Use curly braces for JavaScript expressions</li>
+    <li>Never wrap variables in quotes</li>
+</ul>
+
+<hr />
+
+<h4>Interview-ready summary</h4>
+
+<p>
+    In JSX, props are accessed inside attributes using curly braces { }.
+    If you use quotes, React treats it as a literal string.
+    For dynamic values or expressions, always wrap them in braces.
+</p>
+`,
         },
+
         {
             id: "core-058",
             q: "PropTypes: how do you define array of shape?",
-            a: "",
+            a: `
+<p>
+    In React, if a prop is expected to be an <strong>array of objects</strong>,
+    you can validate its structure using <code>PropTypes.arrayOf</code> together
+    with <code>PropTypes.shape</code>.
+</p>
+
+<p>
+    This ensures that every object inside the array follows a specific structure.
+</p>
+
+<hr />
+
+<h4>1. Basic syntax</h4>
+
+<pre><code>
+import PropTypes from "prop-types";
+
+function UsersList({ users }) {
+    return (
+        &lt;ul&gt;
+            {users.map(user =&gt; (
+                &lt;li key={user.id}&gt;
+                    {user.name} - {user.role}
+                &lt;/li&gt;
+            ))}
+        &lt;/ul&gt;
+    );
+}
+
+UsersList.propTypes = {
+    users: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.number.isRequired,
+            name: PropTypes.string.isRequired,
+            role: PropTypes.string
+        })
+    ).isRequired
+};
+</code></pre>
+
+<hr />
+
+<h4>2. What is happening here</h4>
+
+<ul>
+    <li><code>arrayOf</code> ensures the prop is an array</li>
+    <li><code>shape</code> defines the structure of each object</li>
+    <li><code>isRequired</code> ensures the prop must be passed</li>
+</ul>
+
+<p>
+    If any object inside the array does not match the defined shape,
+    React will show a warning in development mode.
+</p>
+
+<hr />
+
+<h4>3. Strict object validation</h4>
+
+<p>
+    If you want to ensure that no extra keys are allowed,
+    you can use <code>PropTypes.exact</code> instead of <code>shape</code>.
+</p>
+
+<pre><code>
+users: PropTypes.arrayOf(
+    PropTypes.exact({
+        id: PropTypes.number.isRequired,
+        name: PropTypes.string.isRequired
+    })
+)
+</code></pre>
+
+<p>
+    <code>exact</code> throws a warning if additional unexpected properties are present.
+</p>
+
+<hr />
+
+<h4>4. Important limitation</h4>
+
+<ul>
+    <li>PropTypes only run in development</li>
+    <li>No runtime enforcement in production</li>
+    <li>No compile-time safety</li>
+</ul>
+
+<hr />
+
+<h4>Interview-ready summary</h4>
+
+<ul>
+    <li>Use <code>PropTypes.arrayOf</code> to validate arrays</li>
+    <li>Use <code>PropTypes.shape</code> to validate object structure</li>
+    <li>Combine both for array of objects</li>
+    <li>Use <code>exact</code> for stricter validation</li>
+</ul>
+
+<p>
+    In modern projects, TypeScript is preferred, but PropTypes are still
+    common in legacy or JavaScript-only codebases.
+</p>
+`,
         },
+
         {
             id: "core-059",
             q: "How do you conditionally apply className?",
-            a: "",
+            a: `
+<p>
+    In React, you often need to apply a class conditionally based on
+    state, props, or some computed value. Since <code>className</code>
+    accepts a string, you can build that string dynamically.
+</p>
+
+<hr />
+
+<h4>1. Using a ternary operator</h4>
+
+<p>
+    The most common and straightforward way is using a ternary expression.
+</p>
+
+<pre><code>
+function Button({ isActive }) {
+    return (
+        &lt;button
+            className={isActive ? "btn btn-active" : "btn"}
+        &gt;
+            Click me
+        &lt;/button&gt;
+    );
+}
+</code></pre>
+
+<p>
+    If <code>isActive</code> is true, the active class is added.
+</p>
+
+<hr />
+
+<h4>2. Using logical AND operator</h4>
+
+<p>
+    You can conditionally append a class using the && operator.
+</p>
+
+<pre><code>
+function Card({ highlighted }) {
+    return (
+        &lt;div
+            className={
+                "card " + (highlighted && "card-highlight")
+            }
+        &gt;
+            Content
+        &lt;/div&gt;
+    );
+}
+</code></pre>
+
+<p>
+    If <code>highlighted</code> is false, the expression returns false,
+    which React ignores when rendering.
+</p>
+
+<hr />
+
+<h4>3. Template literals</h4>
+
+<p>
+    Template strings make it easier to combine multiple conditions.
+</p>
+
+<pre><code>
+function Item({ isSelected }) {
+    return (
+        &lt;li
+            className={
+                \`item \${isSelected ? "selected" : ""}\`
+            }
+        &gt;
+            List Item
+        &lt;/li&gt;
+    );
+}
+</code></pre>
+
+<hr />
+
+<h4>4. Using a helper library - classnames</h4>
+
+<p>
+    In larger applications, the <code>classnames</code> library is commonly used
+    to make conditional class logic cleaner.
+</p>
+
+<pre><code>
+import classNames from "classnames";
+
+function Alert({ type }) {
+    const classes = classNames("alert", {
+        "alert-success": type === "success",
+        "alert-error": type === "error"
+    });
+
+    return &lt;div className={classes}&gt;Message&lt;/div&gt;;
+}
+</code></pre>
+
+<p>
+    This approach keeps the JSX readable when multiple conditions are involved.
+</p>
+
+<hr />
+
+<h4>Common mistakes</h4>
+
+<ul>
+    <li>Forgetting to include the base class</li>
+    <li>Accidentally adding extra spaces</li>
+    <li>Using complex inline logic that reduces readability</li>
+</ul>
+
+<hr />
+
+<h4>Interview-ready summary</h4>
+
+<ul>
+    <li>Use ternary for simple conditions</li>
+    <li>Use && for single optional classes</li>
+    <li>Use template literals for combining classes</li>
+    <li>Use classnames library for complex conditional logic</li>
+</ul>
+
+<p>
+    Conditional className handling is just string construction based on state or props.
+</p>
+`,
         },
+
         {
             id: "core-060",
-            q: "React vs ReactDOM: what’s the difference?",
-            a: "",
+            q: "React vs ReactDOM: what's the difference?",
+            a: `
+<p>
+    <strong>React</strong> and <strong>ReactDOM</strong> are two separate
+    packages that work together, but they have different responsibilities.
+</p>
+
+<hr />
+
+<h4>1. What is React?</h4>
+
+<p>
+    The <strong>react</strong> package contains the core logic of React.
+    It provides:
+</p>
+
+<ul>
+    <li>Component creation</li>
+    <li>Hooks like useState and useEffect</li>
+    <li>Element creation and reconciliation logic</li>
+    <li>Context API and other core features</li>
+</ul>
+
+<p>
+    React itself does not know anything about the browser DOM.
+    It only describes what the UI should look like.
+</p>
+
+<hr />
+
+<h4>2. What is ReactDOM?</h4>
+
+<p>
+    The <strong>react-dom</strong> package is responsible for rendering
+    React components into the browser DOM.
+</p>
+
+<pre><code>
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+
+const root = ReactDOM.createRoot(
+    document.getElementById("root")
+);
+
+root.render(&lt;App /&gt;);
+</code></pre>
+
+<p>
+    ReactDOM takes the virtual representation created by React
+    and updates the real browser DOM.
+</p>
+
+<hr />
+
+<h4>3. Why are they separate?</h4>
+
+<p>
+    React is platform-independent. It can work with different renderers:
+</p>
+
+<ul>
+    <li>react-dom - for web browsers</li>
+    <li>react-native - for mobile apps</li>
+    <li>react-three-fiber - for 3D rendering</li>
+</ul>
+
+<p>
+    Keeping React separate allows the same core logic to work
+    across multiple platforms.
+</p>
+
+<hr />
+
+<h4>4. Key difference in one sentence</h4>
+
+<ul>
+    <li>React defines components and manages rendering logic.</li>
+    <li>ReactDOM connects React to the browser DOM.</li>
+</ul>
+
+<hr />
+
+<h4>Interview-ready summary</h4>
+
+<p>
+    React contains the core library for building components and managing UI logic,
+    while ReactDOM is the renderer that updates the actual browser DOM.
+    They are separated to keep React platform-independent.
+</p>
+`,
         },
+
         {
             id: "core-061",
             q: "How do you use label properly in React?",
-            a: "",
+            a: `
+<p>
+    In React, a <strong>label</strong> is used to describe an input element
+    and improve accessibility. Properly connecting a label to its input
+    ensures screen readers work correctly and clicking the label focuses
+    the input.
+</p>
+
+<hr />
+
+<h4>1. Using htmlFor instead of for</h4>
+
+<p>
+    In regular HTML, we use the <code>for</code> attribute.
+    In React, we must use <code>htmlFor</code> because
+    <code>for</code> is a reserved JavaScript keyword.
+</p>
+
+<pre><code>
+function FormExample() {
+    return (
+        &lt;div&gt;
+            &lt;label htmlFor="email"&gt;Email&lt;/label&gt;
+            &lt;input id="email" type="email" /&gt;
+        &lt;/div&gt;
+    );
+}
+</code></pre>
+
+<p>
+    The value of <code>htmlFor</code> must match the input's <code>id</code>.
+</p>
+
+<hr />
+
+<h4>2. Why proper label usage matters</h4>
+
+<ul>
+    <li>Improves accessibility for screen readers</li>
+    <li>Clicking the label focuses the input</li>
+    <li>Better form usability</li>
+    <li>Required for WCAG compliance</li>
+</ul>
+
+<hr />
+
+<h4>3. Wrapping input inside label</h4>
+
+<p>
+    Another valid pattern is wrapping the input inside the label.
+    In this case, <code>htmlFor</code> is not required.
+</p>
+
+<pre><code>
+function CheckboxExample() {
+    return (
+        &lt;label&gt;
+            &lt;input type="checkbox" /&gt;
+            Accept Terms
+        &lt;/label&gt;
+    );
+}
+</code></pre>
+
+<p>
+    This automatically associates the label with the input.
+</p>
+
+<hr />
+
+<h4>4. Common mistakes</h4>
+
+<ul>
+    <li>Using <code>for</code> instead of <code>htmlFor</code></li>
+    <li>Forgetting to match id and htmlFor</li>
+    <li>Using placeholder instead of label</li>
+</ul>
+
+<p>
+    A placeholder is not a replacement for a label.
+    Labels should always be visible for accessibility.
+</p>
+
+<hr />
+
+<h4>Interview-ready summary</h4>
+
+<ul>
+    <li>Use htmlFor instead of for in React</li>
+    <li>Match htmlFor with the input id</li>
+    <li>Wrapping input inside label is also valid</li>
+    <li>Proper labels improve accessibility and UX</li>
+</ul>
+
+<p>
+    In professional applications, using labels correctly is important
+    not just for forms, but for accessibility standards and usability.
+</p>
+`,
         },
+
         {
             id: "core-062",
             q: "How do you merge multiple inline style objects?",
-            a: "",
+            a: `
+<p>
+    In React, inline styles are passed as JavaScript objects.
+    If you need to combine multiple style objects, you can merge them
+    before passing them to the <code>style</code> prop.
+</p>
+
+<hr />
+
+<h4>1. Using the spread operator - recommended approach</h4>
+
+<p>
+    The most common and clean way is using the JavaScript spread operator.
+</p>
+
+<pre><code>
+const baseStyle = {
+    padding: "10px",
+    backgroundColor: "black",
+    color: "white"
+};
+
+const dangerStyle = {
+    backgroundColor: "red"
+};
+
+const mergedStyle = {
+    ...baseStyle,
+    ...dangerStyle
+};
+
+function Button() {
+    return &lt;button style={mergedStyle}&gt;Delete&lt;/button&gt;;
+}
+</code></pre>
+
+<p>
+    If multiple objects contain the same property, the later one overrides
+    the previous value.
+</p>
+
+<hr />
+
+<h4>2. Merging directly inside JSX</h4>
+
+<p>
+    You can also merge them inline without creating a separate variable.
+</p>
+
+<pre><code>
+&lt;button
+    style={{
+        ...baseStyle,
+        ...dangerStyle
+    }}
+&gt;
+    Delete
+&lt;/button&gt;
+</code></pre>
+
+<hr />
+
+<h4>3. Using Object.assign</h4>
+
+<p>
+    Another way is using <code>Object.assign</code>, although it is less common today.
+</p>
+
+<pre><code>
+const mergedStyle = Object.assign({}, baseStyle, dangerStyle);
+</code></pre>
+
+<p>
+    The first argument should be an empty object to avoid mutating
+    the original style objects.
+</p>
+
+<hr />
+
+<h4>4. Conditional style merging</h4>
+
+<p>
+    Often you merge styles based on a condition.
+</p>
+
+<pre><code>
+const style = {
+    ...baseStyle,
+    ...(isActive && { border: "2px solid white" })
+};
+</code></pre>
+
+<p>
+    This pattern keeps components flexible without repeating style logic.
+</p>
+
+<hr />
+
+<h4>Important notes</h4>
+
+<ul>
+    <li>Later properties override earlier ones</li>
+    <li>Avoid mutating original style objects</li>
+    <li>For complex styling logic, consider CSS classes or styled-components</li>
+</ul>
+
+<hr />
+
+<h4>Interview-ready summary</h4>
+
+<p>
+    You merge multiple inline style objects using the spread operator or
+    Object.assign. The spread operator is preferred because it is cleaner,
+    more readable, and does not mutate existing objects.
+</p>
+`,
         },
+
         {
             id: "core-063",
             q: "How to rerender/update UI on browser resize?",
-            a: "",
+            a: `
+<p>
+    In React, the UI does not automatically re-render when the browser window
+    resizes unless the resize affects component state.
+</p>
+
+<p>
+    To update the UI on browser resize, you need to listen to the
+    <strong>"resize"</strong> event and update state manually.
+</p>
+
+<hr />
+
+<h4>1. Basic approach using useEffect</h4>
+
+<p>
+    The common pattern is to attach a resize event listener inside
+    <code>useEffect</code> and update state whenever the window size changes.
+</p>
+
+<pre><code>
+import { useState, useEffect } from "react";
+
+function WindowSizeTracker() {
+    const [width, setWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        function handleResize() {
+            setWidth(window.innerWidth);
+        }
+
+        window.addEventListener("resize", handleResize);
+
+        // cleanup
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
+    return &lt;div&gt;Window width: {width}px&lt;/div&gt;;
+}
+</code></pre>
+
+<p>
+    When <code>setWidth</code> runs, React re-renders the component with the new value.
+</p>
+
+<hr />
+
+<h4>2. Tracking both width and height</h4>
+
+<pre><code>
+function useWindowSize() {
+    const [size, setSize] = useState({
+        width: window.innerWidth,
+        height: window.innerHeight
+    });
+
+    useEffect(() => {
+        function handleResize() {
+            setSize({
+                width: window.innerWidth,
+                height: window.innerHeight
+            });
+        }
+
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
+    return size;
+}
+</code></pre>
+
+<p>
+    This is usually extracted into a custom hook like <code>useWindowSize</code>
+    so multiple components can reuse it.
+</p>
+
+<hr />
+
+<h4>3. Important performance note</h4>
+
+<p>
+    The resize event can fire many times per second.
+    In complex UIs, you may want to throttle or debounce the handler
+    to avoid excessive re-renders.
+</p>
+
+<ul>
+    <li>Use <code>requestAnimationFrame</code></li>
+    <li>Use a debounce utility</li>
+    <li>Or rely on CSS media queries when possible</li>
+</ul>
+
+<hr />
+
+<h4>4. Prefer CSS when possible</h4>
+
+<p>
+    If the goal is purely layout-based responsiveness,
+    CSS media queries are often better than JavaScript listeners.
+</p>
+
+<p>
+    JavaScript resize handling is mainly needed when logic
+    depends on actual window dimensions.
+</p>
+
+<hr />
+
+<h4>Interview-ready summary</h4>
+
+<ul>
+    <li>React does not rerender on resize automatically</li>
+    <li>Use <code>window.addEventListener("resize")</code> inside <code>useEffect</code></li>
+    <li>Update state to trigger re-render</li>
+    <li>Always clean up the event listener</li>
+    <li>Prefer CSS media queries for layout-only changes</li>
+</ul>
+
+<p>
+    In short, you rerender on browser resize by updating component state
+    in response to the window "resize" event.
+</p>
+`,
         },
+
         {
             id: "core-064",
             q: "How to pretty print JSON in React UI?",
-            a: "",
+            a: `
+<p>
+    Pretty printing JSON in React means formatting JSON data so that it is
+    readable in the UI with proper indentation and structure.
+    This is commonly needed for debugging tools, API viewers,
+    admin dashboards, or developer panels.
+</p>
+
+<hr />
+
+<h4>1. Using JSON.stringify with spacing</h4>
+
+<p>
+    The simplest way to pretty print JSON is by using
+    <code>JSON.stringify(value, null, 2)</code>.
+</p>
+
+<pre><code>
+const data = {
+    name: "Ash",
+    role: "Developer",
+    skills: ["React", "Node", "MongoDB"]
+};
+
+function JsonViewer() {
+    return (
+        &lt;pre&gt;
+            {JSON.stringify(data, null, 2)}
+        &lt;/pre&gt;
+    );
+}
+</code></pre>
+
+<p>
+    The third parameter 2 means indent with 2 spaces.
+    This makes the JSON readable with proper formatting.
+</p>
+
+<hr />
+
+<h4>2. Why use &lt;pre&gt; tag?</h4>
+
+<p>
+    The &lt;pre&gt; element preserves whitespace and indentation.
+    Without it, the JSON would collapse into a single line.
+</p>
+
+<hr />
+
+<h4>3. Styling for better readability</h4>
+
+<p>
+    You can improve readability by adding background, padding,
+    and monospace font styling.
+</p>
+
+<pre><code>
+&lt;pre
+    style={{
+        background: "#111",
+        color: "#fff",
+        padding: "12px",
+        borderRadius: "8px",
+        overflowX: "auto"
+    }}
+&gt;
+    {JSON.stringify(data, null, 2)}
+&lt;/pre&gt;
+</code></pre>
+
+<hr />
+
+<h4>4. Handling dynamic API data</h4>
+
+<p>
+    When displaying API responses, always ensure the value is valid JSON
+    before calling stringify.
+</p>
+
+<pre><code>
+{data && (
+    &lt;pre&gt;
+        {JSON.stringify(data, null, 2)}
+    &lt;/pre&gt;
+)}
+</code></pre>
+
+<hr />
+
+<h4>5. Using third-party JSON viewers</h4>
+
+<p>
+    For advanced formatting, expandable trees, and better UX,
+    libraries like <code>react-json-view</code> can be used.
+</p>
+
+<ul>
+    <li>Collapsible nodes</li>
+    <li>Editable JSON</li>
+    <li>Better visual structure</li>
+</ul>
+
+<hr />
+
+<h4>Common mistakes</h4>
+
+<ul>
+    <li>Rendering raw objects directly without stringify</li>
+    <li>Forgetting &lt;pre&gt; so formatting breaks</li>
+    <li>Rendering huge JSON without scroll container</li>
+</ul>
+
+<hr />
+
+<h4>Interview summary</h4>
+
+<ul>
+    <li>Use JSON.stringify(data, null, 2) for indentation</li>
+    <li>Wrap it inside a &lt;pre&gt; tag to preserve spacing</li>
+    <li>Use a JSON viewer library for advanced use cases</li>
+</ul>
+
+<p>
+    Pretty printing JSON in React is mainly about formatting it
+    using JSON.stringify and preserving whitespace in the UI.
+</p>
+`,
         },
+
         {
             id: "core-065",
-            q: "Why can’t you update props from inside a component?",
-            a: "",
+            q: "Why can't you update props from inside a component?",
+            a: `
+<p>
+    In React, <strong>props are read-only</strong>. A component cannot modify
+    the props it receives from its parent.
+</p>
+
+<p>
+    This is because React follows a <strong>one-way data flow</strong> model,
+    where data moves from parent to child. The child can use the data,
+    but it cannot change it directly.
+</p>
+
+<hr />
+
+<h4>1. Props are controlled by the parent</h4>
+
+<p>
+    Props belong to the parent component. The child only receives a copy of
+    those values as inputs.
+</p>
+
+<pre><code>
+function Child({ count }) {
+    count = count + 1; // Not allowed - this does not update parent state
+    return &lt;div&gt;{count}&lt;/div&gt;;
+}
+</code></pre>
+
+<p>
+    Even if you try to modify a prop variable inside the component,
+    it will not update the parent or trigger a re-render correctly.
+</p>
+
+<hr />
+
+<h4>2. React components must stay pure</h4>
+
+<p>
+    React expects function components to behave like pure functions.
+    For the same props, the component should return the same UI.
+</p>
+
+<ul>
+    <li>No side effects inside render</li>
+    <li>No mutation of input values</li>
+</ul>
+
+<p>
+    Mutating props would break this predictable behavior.
+</p>
+
+<hr />
+
+<h4>3. Correct way to change prop-driven data</h4>
+
+<p>
+    If a child needs to update something, the parent must pass a callback
+    function as a prop.
+</p>
+
+<pre><code>
+function Parent() {
+    const [count, setCount] = useState(0);
+
+    return (
+        &lt;Child count={count} onIncrement={() =&gt; setCount(count + 1)} /&gt;
+    );
+}
+
+function Child({ count, onIncrement }) {
+    return (
+        &lt;button onClick={onIncrement}&gt;
+            {count}
+        &lt;/button&gt;
+    );
+}
+</code></pre>
+
+<p>
+    Here, the child does not change the prop directly.
+    It calls a function provided by the parent.
+</p>
+
+<hr />
+
+<h4>4. Why this design is important</h4>
+
+<ul>
+    <li>Keeps data flow predictable</li>
+    <li>Makes debugging easier</li>
+    <li>Avoids accidental state mutation</li>
+    <li>Improves component reusability</li>
+</ul>
+
+<hr />
+
+<h4>Interview-ready summary</h4>
+
+<ul>
+    <li>Props are immutable</li>
+    <li>They are owned by the parent</li>
+    <li>Children cannot modify them directly</li>
+    <li>Updates must happen through parent state via callbacks</li>
+</ul>
+
+<p>
+    In short, props are read-only because React enforces one-way data flow
+    and predictable component behavior.
+</p>
+`,
         },
+
         {
             id: "core-066",
             q: "How do you auto-focus an input on page load?",
-            a: "",
+            a: `
+<p>
+    In React, you can auto-focus an input when the component mounts.
+    There are two common approaches depending on how much control you need.
+</p>
+
+<hr />
+
+<h4>1. Using the autoFocus attribute - simple approach</h4>
+
+<p>
+    React provides a built-in <code>autoFocus</code> attribute that works
+    similar to the native HTML autofocus attribute.
+</p>
+
+<pre><code>
+function LoginForm() {
+    return (
+        &lt;input type="text" autoFocus placeholder="Enter username" /&gt;
+    );
+}
+</code></pre>
+
+<p>
+    This works well for simple cases where the input is rendered immediately.
+</p>
+
+<hr />
+
+<h4>2. Using useRef and useEffect - recommended for real apps</h4>
+
+<p>
+    In more controlled scenarios, especially when inputs are conditionally
+    rendered, using <code>useRef</code> is the better approach.
+</p>
+
+<pre><code>
+import { useEffect, useRef } from "react";
+
+function LoginForm() {
+    const inputRef = useRef(null);
+
+    useEffect(() => {
+        inputRef.current?.focus();
+    }, []);
+
+    return &lt;input ref={inputRef} type="text" placeholder="Enter username" /&gt;;
+}
+</code></pre>
+
+<p>
+    The empty dependency array ensures the focus runs only once when the
+    component mounts.
+</p>
+
+<hr />
+
+<h4>3. When to prefer useRef over autoFocus</h4>
+
+<ul>
+    <li>When the input is rendered conditionally</li>
+    <li>When you need to re-focus after state updates</li>
+    <li>When building modals or dynamic forms</li>
+</ul>
+
+<hr />
+
+<h4>Common mistake</h4>
+
+<p>
+    If the input is not mounted yet when the effect runs, focus will fail.
+    Always ensure the element exists before calling <code>focus()</code>.
+</p>
+
+<hr />
+
+<h4>Interview-ready summary</h4>
+
+<ul>
+    <li>Use autoFocus for simple cases</li>
+    <li>Use useRef + useEffect for controlled focus behavior</li>
+    <li>useRef is more reliable in dynamic UI scenarios</li>
+</ul>
+
+<p>
+    In real-world applications, useRef is the preferred and more predictable
+    way to auto-focus inputs.
+</p>
+`,
         },
+
         {
             id: "core-067",
             q: "How can you find React version at runtime in the browser?",
-            a: "",
+            a: `
+<p>
+    You can find the React version at runtime in the browser in multiple ways,
+    depending on whether you are in development or production mode.
+</p>
+
+<hr />
+
+<h4>1. Using React.version (direct method)</h4>
+
+<p>
+    React exposes its version via the <code>React.version</code> property.
+</p>
+
+<pre><code>
+import React from "react";
+
+console.log(React.version);
+</code></pre>
+
+<p>
+    This logs the current React version being used in the application.
+</p>
+
+<p>
+    You can also access it directly in the browser console if React is available globally:
+</p>
+
+<pre><code>
+window.React.version
+</code></pre>
+
+<hr />
+
+<h4>2. Using React DevTools</h4>
+
+<p>
+    If you have <strong>React Developer Tools</strong> installed in your browser,
+    open DevTools and go to the React tab. The React version is displayed
+    at the top of the panel.
+</p>
+
+<p>
+    This is the most practical way during development.
+</p>
+
+<hr />
+
+<h4>3. Checking package.json</h4>
+
+<p>
+    Although not strictly runtime, you can check the installed version inside
+    <code>package.json</code>:
+</p>
+
+<pre><code>
+"dependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+}
+</code></pre>
+
+<hr />
+
+<h4>Important note</h4>
+
+<ul>
+    <li><code>React.version</code> works in both development and production builds</li>
+    <li>React DevTools is development-friendly and easier to inspect</li>
+</ul>
+
+<hr />
+
+<h4>Interview-ready summary</h4>
+
+<p>
+    You can find the React version at runtime by logging <code>React.version</code>
+    in the browser console or by checking it in React DevTools. The version is
+    exposed directly by the React library.
+</p>
+`,
         },
+
         {
             id: "core-068",
             q: "How do you integrate Google Analytics with React Router?",
-            a: "",
+            a: `
+<p>
+    In a React application that uses <strong>React Router</strong>, page
+    navigation does not reload the browser. That means Google Analytics
+    will not automatically detect route changes like in traditional
+    multi-page websites.
+</p>
+
+<p>
+    To integrate Google Analytics correctly, we need to manually track
+    route changes whenever the URL changes.
+</p>
+
+<hr />
+
+<h4>1. Install Google Analytics (GA4)</h4>
+
+<p>
+    First, add the GA script inside <code>index.html</code>.
+</p>
+
+<pre><code>
+&lt;script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-XXXXXXX");
+&lt;/script&gt;
+</code></pre>
+
+<p>
+    Replace <code>G-XXXXXXX</code> with your actual measurement ID.
+</p>
+
+<hr />
+
+<h4>2. Track route changes using useLocation</h4>
+
+<p>
+    React Router provides a hook called <code>useLocation</code> that gives
+    access to the current URL. We can listen for changes and trigger
+    a page view event.
+</p>
+
+<pre><code>
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
+function AnalyticsTracker() {
+    const location = useLocation();
+
+    useEffect(() => {
+        if (window.gtag) {
+            window.gtag("config", "G-XXXXXXX", {
+                page_path: location.pathname,
+            });
+        }
+    }, [location]);
+
+    return null;
+}
+</code></pre>
+
+<hr />
+
+<h4>3. Add tracker inside Router</h4>
+
+<p>
+    Place the tracking component inside your Router so it runs
+    whenever the route changes.
+</p>
+
+<pre><code>
+import { BrowserRouter } from "react-router-dom";
+
+function App() {
+    return (
+        &lt;BrowserRouter&gt;
+            &lt;AnalyticsTracker /&gt;
+            &lt;AppRoutes /&gt;
+        &lt;/BrowserRouter&gt;
+    );
+}
+</code></pre>
+
+<hr />
+
+<h4>4. Why this is necessary</h4>
+
+<ul>
+    <li>React Router changes URL without full page reload</li>
+    <li>Google Analytics only auto-detects full reloads</li>
+    <li>We must manually send page_view events on route change</li>
+</ul>
+
+<hr />
+
+<h4>5. Alternative approach - react-ga package</h4>
+
+<p>
+    Instead of manually calling <code>gtag</code>, you can use
+    libraries like <code>react-ga4</code> which simplify tracking.
+</p>
+
+<pre><code>
+import ReactGA from "react-ga4";
+
+ReactGA.initialize("G-XXXXXXX");
+
+useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: location.pathname });
+}, [location]);
+</code></pre>
+
+<hr />
+
+<h4>Interview-ready summary</h4>
+
+<ul>
+    <li>Add GA script in index.html</li>
+    <li>Use useLocation from React Router</li>
+    <li>Trigger gtag page view inside useEffect</li>
+    <li>Tracking must be manual in SPAs</li>
+</ul>
+
+<p>
+    In React Router applications, analytics integration requires
+    listening to route changes and manually sending page view events
+    because there is no full page reload.
+</p>
+`,
         },
+
         {
             id: "core-069",
             q: "Vendor prefixes in inline styles: how to handle?",
-            a: "",
+            a: `
+<p>
+    In React, inline styles are written as JavaScript objects, not regular CSS.
+    Because of that, vendor-prefixed properties must follow JavaScript naming rules.
+</p>
+
+<p>
+    Instead of writing CSS like <code>-webkit-transition</code>, you use
+    camelCase property names in React.
+</p>
+
+<hr />
+
+<h4>1. How vendor prefixes work in React inline styles</h4>
+
+<p>
+    React expects style properties in camelCase. Vendor prefixes must also follow
+    camelCase rules, and some require capitalization.
+</p>
+
+<pre><code>
+const boxStyle = {
+    WebkitTransition: "all 0.3s ease",
+    MozTransition: "all 0.3s ease",
+    msTransition: "all 0.3s ease"
+};
+
+function Box() {
+    return &lt;div style={boxStyle}&gt;Hover me&lt;/div&gt;;
+}
+</code></pre>
+
+<p>
+    Important:
+</p>
+
+<ul>
+    <li><code>Webkit</code> starts with a capital W</li>
+    <li><code>Moz</code> starts with a capital M</li>
+    <li><code>ms</code> stays lowercase</li>
+</ul>
+
+<hr />
+
+<h4>2. Do we still need vendor prefixes today?</h4>
+
+<p>
+    In modern browsers, most common CSS properties no longer require vendor prefixes.
+    For standard UI work, you rarely need to manually add them.
+</p>
+
+<hr />
+
+<h4>3. Recommended approach in real projects</h4>
+
+<p>
+    Instead of handling vendor prefixes manually in inline styles, it is better to:
+</p>
+
+<ul>
+    <li>Use regular CSS with Autoprefixer</li>
+    <li>Use CSS-in-JS libraries like styled-components</li>
+    <li>Let build tools handle cross-browser compatibility</li>
+</ul>
+
+<p>
+    Most bundlers automatically add necessary prefixes during build time.
+</p>
+
+<hr />
+
+<h4>4. Important limitation of inline styles</h4>
+
+<ul>
+    <li>No support for pseudo-classes like :hover</li>
+    <li>No media queries</li>
+    <li>Harder to maintain for complex styling</li>
+</ul>
+
+<p>
+    This is one reason inline styles are usually reserved for dynamic styling,
+    while full styling is handled using CSS or styled-components.
+</p>
+
+<hr />
+
+<h4>Interview-ready summary</h4>
+
+<ul>
+    <li>Inline styles use camelCase property names</li>
+    <li>Vendor prefixes must follow camelCase - Webkit, Moz, ms</li>
+    <li>Modern build tools usually handle prefixes automatically</li>
+    <li>Inline styles are not ideal for complex styling needs</li>
+</ul>
+
+<p>
+    In modern React projects, manual vendor prefixing is rarely required because
+    tooling handles it automatically.
+</p>
+`,
         },
+
         {
             id: "core-070",
             q: "ES6 import/export patterns for components?",
-            a: "",
+            a: `
+<p>
+    In React projects, ES6 modules are used to organize components and share
+    them across files. Understanding <strong>default exports</strong> and
+    <strong>named exports</strong> is important for clean architecture and
+    avoiding common import mistakes.
+</p>
+
+<hr />
+
+<h4>1. Default export (most common for components)</h4>
+
+<p>
+    A file can have only one default export. This is the most common pattern
+    for exporting React components.
+</p>
+
+<pre><code>
+function Button() {
+    return &lt;button&gt;Click&lt;/button&gt;;
+}
+
+export default Button;
+</code></pre>
+
+<p>
+    Importing a default export:
+</p>
+
+<pre><code>
+import Button from "./Button";
+</code></pre>
+
+<p>
+    You can rename the imported variable because it is default:
+</p>
+
+<pre><code>
+import MyButton from "./Button";
+</code></pre>
+
+<hr />
+
+<h4>2. Named exports</h4>
+
+<p>
+    Named exports allow multiple exports from the same file.
+</p>
+
+<pre><code>
+export function Button() {
+    return &lt;button&gt;Click&lt;/button&gt;;
+}
+
+export function Icon() {
+    return &lt;span&gt;Icon&lt;/span&gt;;
+}
+</code></pre>
+
+<p>
+    Importing named exports:
+</p>
+
+<pre><code>
+import { Button, Icon } from "./components";
+</code></pre>
+
+<p>
+    Names must match exactly unless you rename them using 'as'.
+</p>
+
+<pre><code>
+import { Button as PrimaryButton } from "./components";
+</code></pre>
+
+<hr />
+
+<h4>3. Exporting at the bottom</h4>
+
+<p>
+    Many projects define components first and export at the bottom for cleaner structure.
+</p>
+
+<pre><code>
+function Button() {
+    return &lt;button&gt;Click&lt;/button&gt;;
+}
+
+export { Button };
+</code></pre>
+
+<hr />
+
+<h4>4. Combining default and named exports</h4>
+
+<p>
+    A file can have one default export and multiple named exports.
+</p>
+
+<pre><code>
+export function Icon() {
+    return &lt;span&gt;Icon&lt;/span&gt;;
+}
+
+function Button() {
+    return &lt;button&gt;Click&lt;/button&gt;;
+}
+
+export default Button;
+</code></pre>
+
+<pre><code>
+import Button, { Icon } from "./Button";
+</code></pre>
+
+<hr />
+
+<h4>5. Re-exporting pattern</h4>
+
+<p>
+    To keep imports clean, many projects use an index file to re-export components.
+</p>
+
+<pre><code>
+// components/index.js
+export { default as Button } from "./Button";
+export { default as Card } from "./Card";
+</code></pre>
+
+<pre><code>
+import { Button, Card } from "./components";
+</code></pre>
+
+<p>
+    This improves folder-level organization and avoids long import paths.
+</p>
+
+<hr />
+
+<h4>6. Common interview pitfalls</h4>
+
+<ul>
+    <li>Only one default export per file</li>
+    <li>Named imports must use curly braces</li>
+    <li>Wrong import type causes runtime errors</li>
+    <li>Default import name can be changed, named cannot unless using 'as'</li>
+</ul>
+
+<hr />
+
+<h4>Interview-ready summary</h4>
+
+<ul>
+    <li>Default export is most common for React components</li>
+    <li>Named exports are useful for utilities and multiple exports</li>
+    <li>Index re-export pattern keeps imports clean</li>
+    <li>Understanding import differences avoids common runtime errors</li>
+</ul>
+
+<p>
+    In most modern React codebases, components are default exported,
+    while hooks, helpers, and constants are often named exports.
+</p>
+`,
         },
+
         {
             id: "core-071",
             q: "Any exceptions to React component naming rules?",
-            a: "",
+            a: `
+<p>
+    React components must follow certain naming conventions, mainly that
+    component names must start with a <strong>capital letter</strong>.
+    This is how React distinguishes custom components from native HTML tags.
+</p>
+
+<hr />
+
+<h4>1. Why capitalization matters</h4>
+
+<p>
+    In JSX, lowercase names are treated as built-in DOM elements.
+    Uppercase names are treated as custom React components.
+</p>
+
+<pre><code>
+function MyButton() {
+    return &lt;button&gt;Click&lt;/button&gt;;
+}
+
+// Correct usage
+&lt;MyButton /&gt;
+
+// Incorrect - treated as a native element
+&lt;myButton /&gt;
+</code></pre>
+
+<p>
+    If you use lowercase for a component, React will assume it is a
+    regular HTML tag and will not render your component.
+</p>
+
+<hr />
+
+<h4>2. Exception - Custom elements (Web Components)</h4>
+
+<p>
+    When using custom Web Components, lowercase with a dash is valid.
+    For example:
+</p>
+
+<pre><code>
+&lt;my-widget&gt;&lt;/my-widget&gt;
+</code></pre>
+
+<p>
+    According to HTML rules, custom elements must contain a dash.
+    React allows this because it is treated as a valid DOM element,
+    not a React component.
+</p>
+
+<hr />
+
+<h4>3. Exception - Built-in HTML tags</h4>
+
+<p>
+    Standard HTML tags like:
+</p>
+
+<ul>
+    <li>div</li>
+    <li>span</li>
+    <li>button</li>
+</ul>
+
+<p>
+    must remain lowercase because they are native DOM elements.
+</p>
+
+<hr />
+
+<h4>4. Variable assignment rule</h4>
+
+<p>
+    If you assign a component to a variable, the variable must also
+    be capitalized when used in JSX.
+</p>
+
+<pre><code>
+const Component = MyButton;
+
+// Correct
+&lt;Component /&gt;
+</code></pre>
+
+<hr />
+
+<h4>5. Important interview clarification</h4>
+
+<ul>
+    <li>All React components must start with a capital letter</li>
+    <li>Lowercase names are treated as DOM elements</li>
+    <li>Custom Web Components are allowed if they contain a dash</li>
+</ul>
+
+<hr />
+
+<h4>Interview-ready summary</h4>
+
+<p>
+    React components must be capitalized. The only practical exception is
+    when using native HTML elements or custom Web Components that contain
+    a dash, which React treats as regular DOM elements rather than
+    React components.
+</p>
+`,
         },
+
         {
             id: "core-072",
             q: "Can you use async/await in plain React components?",
-            a: "",
+            a: `
+<p>
+    Yes, you can use <strong>async/await</strong> in React, but not directly
+    inside the component body during rendering.
+</p>
+
+<p>
+    React components must remain <strong>pure and synchronous</strong> while
+    rendering. That means you cannot make the component function itself async.
+</p>
+
+<hr />
+
+<h4>1. What you cannot do</h4>
+
+<p>
+    You cannot mark a component as async like this:
+</p>
+
+<pre><code>
+async function MyComponent() {
+    const data = await fetch('/api/data');
+    return &lt;div&gt;Hello&lt;/div&gt;;
+}
+</code></pre>
+
+<p>
+    React does not wait for async components in normal rendering.
+    The component must return JSX immediately.
+</p>
+
+<hr />
+
+<h4>2. Correct way - use async inside useEffect</h4>
+
+<p>
+    The correct approach is to use async logic inside a side effect.
+</p>
+
+<pre><code>
+import { useEffect, useState } from 'react';
+
+function MyComponent() {
+    const [data, setData] = useState(null);
+
+    useEffect(() => {
+        async function fetchData() {
+            const res = await fetch('/api/data');
+            const json = await res.json();
+            setData(json);
+        }
+
+        fetchData();
+    }, []);
+
+    return &lt;div&gt;{data ? 'Loaded' : 'Loading...'}&lt;/div&gt;;
+}
+</code></pre>
+
+<p>
+    Here, rendering stays synchronous, and async work happens after mount.
+</p>
+
+<hr />
+
+<h4>3. Why React components cannot be async</h4>
+
+<ul>
+    <li>Rendering must be predictable</li>
+    <li>React needs JSX immediately</li>
+    <li>Async functions return Promises, not JSX</li>
+</ul>
+
+<p>
+    If a component returns a Promise, React cannot render it normally.
+</p>
+
+<hr />
+
+<h4>4. Important note - async inside useEffect</h4>
+
+<p>
+    You should not directly make the useEffect callback async:
+</p>
+
+<pre><code>
+useEffect(async () => {
+    // not recommended
+}, []);
+</code></pre>
+
+<p>
+    Instead, define an inner async function and call it.
+</p>
+
+<hr />
+
+<h4>5. What about Suspense and Server Components?</h4>
+
+<p>
+    In React Server Components and Suspense-based data frameworks,
+    async components are allowed. But in plain client-side React,
+    components must stay synchronous.
+</p>
+
+<hr />
+
+<h4>Interview-ready summary</h4>
+
+<ul>
+    <li>You cannot make a normal React component async</li>
+    <li>Async logic should be placed inside useEffect or event handlers</li>
+    <li>Rendering must remain synchronous</li>
+    <li>Server Components are an exception</li>
+</ul>
+
+<p>
+    In plain React, async/await is used inside effects or handlers,
+    not in the component function itself.
+</p>
+`,
         },
+
         {
             id: "core-073",
             q: "Common folder structures for React apps?",
-            a: "",
+            a: `
+<p>
+    There is no single "correct" folder structure in React. The structure depends
+    on project size, team preferences, and scalability requirements.
+    However, some patterns are widely used in production applications.
+</p>
+
+<hr />
+
+<h4>1. By type - small project structure</h4>
+
+<p>
+    This is common in beginner or small projects where files are grouped by type.
+</p>
+
+<pre><code>
+src/
+  components/
+  pages/
+  hooks/
+  utils/
+  services/
+  App.jsx
+  main.jsx
+</code></pre>
+
+<ul>
+    <li>Easy to understand initially</li>
+    <li>Works well for small apps</li>
+    <li>Becomes messy as the app grows</li>
+</ul>
+
+<hr />
+
+<h4>2. Feature-based structure - recommended for scalable apps</h4>
+
+<p>
+    In this approach, everything related to a feature stays inside one folder.
+    This improves maintainability and reduces cross-folder jumping.
+</p>
+
+<pre><code>
+src/
+  features/
+    auth/
+      components/
+      hooks/
+      services/
+      authSlice.js
+    dashboard/
+      components/
+      hooks/
+      dashboardAPI.js
+  shared/
+    ui/
+    hooks/
+    utils/
+  AppRoutes.jsx
+  main.jsx
+</code></pre>
+
+<ul>
+    <li>Scales better in large teams</li>
+    <li>Keeps related logic together</li>
+    <li>Preferred in real-world production apps</li>
+</ul>
+
+<hr />
+
+<h4>3. Atomic or UI-driven structure</h4>
+
+<p>
+    Used in design-heavy systems where components are grouped by UI complexity.
+</p>
+
+<pre><code>
+src/
+  components/
+    atoms/
+    molecules/
+    organisms/
+  layouts/
+  pages/
+</code></pre>
+
+<p>
+    This is common in design systems and component libraries.
+</p>
+
+<hr />
+
+<h4>4. Hybrid structure - most practical</h4>
+
+<p>
+    Many professional apps combine feature-based structure with shared folders.
+</p>
+
+<ul>
+    <li>features - business logic modules</li>
+    <li>shared - reusable UI and utilities</li>
+    <li>app - routing and providers</li>
+</ul>
+
+<hr />
+
+<h4>Important principles</h4>
+
+<ul>
+    <li>Keep related code close together</li>
+    <li>Avoid deeply nested folders</li>
+    <li>Do not over-engineer early</li>
+    <li>Let the structure evolve with project size</li>
+</ul>
+
+<hr />
+
+<h4>Interview-ready summary</h4>
+
+<ul>
+    <li>Small apps use type-based folders</li>
+    <li>Large apps prefer feature-based structure</li>
+    <li>Hybrid structure is common in production</li>
+    <li>Folder structure should support scalability and maintainability</li>
+</ul>
+
+<p>
+    In modern production React applications, feature-based or hybrid
+    structures are considered best practice.
+</p>
+`,
         },
+
         {
             id: "core-074",
             q: "Popular animation libraries used with React?",
-            a: "",
+            a: `
+<p>
+    Animations in React can be handled using CSS, but for complex and
+    production-grade interactions, developers often use dedicated
+    <strong>animation libraries</strong>.
+</p>
+
+<p>
+    These libraries help manage transitions, layout animations,
+    gestures, and performance optimizations more easily.
+</p>
+
+<hr />
+
+<h4>1. Framer Motion</h4>
+
+<p>
+    <strong>Framer Motion</strong> is one of the most popular animation
+    libraries in modern React apps.
+</p>
+
+<ul>
+    <li>Declarative animation API</li>
+    <li>Simple props like <code>initial</code>, <code>animate</code>, <code>exit</code></li>
+    <li>Layout animations built-in</li>
+    <li>Gesture support - drag, hover, tap</li>
+</ul>
+
+<pre><code>
+import { motion } from "framer-motion";
+
+function Box() {
+    return (
+        &lt;motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+        /&gt;
+    );
+}
+</code></pre>
+
+<p>
+    Best for UI transitions, page animations, and interactive components.
+</p>
+
+<hr />
+
+<h4>2. React Spring</h4>
+
+<p>
+    <strong>React Spring</strong> is physics-based. Instead of fixed duration,
+    animations feel more natural using spring dynamics.
+</p>
+
+<ul>
+    <li>Great for complex gesture-based animations</li>
+    <li>Smooth physics-driven transitions</li>
+    <li>More flexible but slightly more complex API</li>
+</ul>
+
+<hr />
+
+<h4>3. GSAP with React</h4>
+
+<p>
+    <strong>GSAP</strong> is a powerful JavaScript animation library that can
+    be used inside React using refs.
+</p>
+
+<ul>
+    <li>High performance timeline-based animations</li>
+    <li>Fine-grained control</li>
+    <li>Common in large production and marketing sites</li>
+</ul>
+
+<p>
+    GSAP is not React-specific, but works very well with it.
+</p>
+
+<hr />
+
+<h4>4. React Transition Group</h4>
+
+<p>
+    <strong>React Transition Group</strong> helps manage enter and exit
+    transitions for components.
+</p>
+
+<ul>
+    <li>Works well with CSS animations</li>
+    <li>Lightweight</li>
+    <li>Often used for simple fade or slide transitions</li>
+</ul>
+
+<hr />
+
+<h4>5. CSS-only animations</h4>
+
+<p>
+    For small interactions like hover effects or simple fades,
+    plain CSS transitions or keyframes are often enough.
+</p>
+
+<ul>
+    <li>Less bundle size</li>
+    <li>No extra dependency</li>
+    <li>Good for micro-interactions</li>
+</ul>
+
+<hr />
+
+<h4>Important practical note</h4>
+
+<ul>
+    <li>For UI-heavy apps - Framer Motion is very common.</li>
+    <li>For physics-heavy interactions - React Spring.</li>
+    <li>For marketing or timeline control - GSAP.</li>
+    <li>For simple transitions - CSS or React Transition Group.</li>
+</ul>
+
+<hr />
+
+<h4>Interview-ready summary</h4>
+
+<p>
+    Popular animation libraries in React include Framer Motion,
+    React Spring, GSAP, and React Transition Group. The choice depends
+    on whether you need simple transitions, physics-based motion,
+    or complex timeline animations.
+</p>
+`,
         },
+
         {
             id: "core-075",
             q: "CSS modules: why do people like them?",
-            a: "",
+            a: `
+<p>
+    CSS Modules are popular because they solve one of the biggest problems in
+    traditional CSS - <strong>global scope collisions</strong>.
+</p>
+
+<p>
+    In normal CSS, class names are global. This means two components can
+    accidentally use the same class name and override each other.
+    CSS Modules prevent that by scoping styles locally to the component.
+</p>
+
+<hr />
+
+<h4>1. Local scope by default</h4>
+
+<p>
+    When using CSS Modules, each class name is automatically transformed into
+    a unique name behind the scenes.
+</p>
+
+<pre><code>
+// Button.module.css
+.primary {
+    background: blue;
+    color: white;
+}
+</code></pre>
+
+<pre><code>
+import styles from "./Button.module.css";
+
+function Button() {
+    return &lt;button className={styles.primary}&gt;Click&lt;/button&gt;;
+}
+</code></pre>
+
+<p>
+    The generated class might look like:
+</p>
+
+<pre><code>
+.primary_x7f3a2
+</code></pre>
+
+<p>
+    This guarantees no accidental conflicts.
+</p>
+
+<hr />
+
+<h4>2. No global naming headaches</h4>
+
+<p>
+    With plain CSS, developers often use naming conventions like BEM to avoid
+    collisions. CSS Modules remove that mental overhead.
+</p>
+
+<ul>
+    <li>No need for long class names</li>
+    <li>No fear of overriding another component</li>
+    <li>No manual namespace management</li>
+</ul>
+
+<hr />
+
+<h4>3. Better maintainability in large apps</h4>
+
+<p>
+    Since styles are tied directly to the component file, it is easier to:
+</p>
+
+<ul>
+    <li>Understand where a style is used</li>
+    <li>Delete unused styles safely</li>
+    <li>Refactor without breaking unrelated components</li>
+</ul>
+
+<hr />
+
+<h4>4. Still just CSS</h4>
+
+<p>
+    CSS Modules do not introduce a new styling language.
+    You still write normal CSS syntax.
+</p>
+
+<p>
+    This makes adoption simple compared to CSS-in-JS libraries.
+</p>
+
+<hr />
+
+<h4>5. Works well with build tools</h4>
+
+<p>
+    Modern bundlers like Vite and Webpack support CSS Modules out of the box.
+    No heavy configuration required.
+</p>
+
+<hr />
+
+<h4>6. Limitations to know</h4>
+
+<ul>
+    <li>Not dynamic like CSS-in-JS</li>
+    <li>Cannot use JavaScript logic inside styles</li>
+    <li>Theming requires additional setup</li>
+</ul>
+
+<hr />
+
+<h4>Interview-ready summary</h4>
+
+<ul>
+    <li>CSS Modules provide local scoping of class names</li>
+    <li>They prevent global CSS conflicts</li>
+    <li>They improve maintainability in large projects</li>
+    <li>They keep standard CSS syntax</li>
+</ul>
+
+<p>
+    People like CSS Modules because they combine the simplicity of plain CSS
+    with the safety of scoped styles.
+</p>
+`,
         },
+
         {
             id: "core-076",
             q: "Popular React-specific linters and why they matter?",
-            a: "",
+            a: `
+<p>
+    Linters help enforce consistent coding standards and catch common mistakes
+    before they become runtime bugs. In React projects, certain
+    <strong>React-specific lint rules</strong> are extremely important because
+    they prevent subtle rendering and hook-related issues.
+</p>
+
+<hr />
+
+<h4>1. ESLint</h4>
+
+<p>
+    <strong>ESLint</strong> is the base linter used in most modern React projects.
+    It analyzes your JavaScript or TypeScript code and reports potential problems.
+</p>
+
+<p>
+    On its own, ESLint is generic. The power comes from plugins.
+</p>
+
+<hr />
+
+<h4>2. eslint-plugin-react</h4>
+
+<p>
+    This plugin adds React-specific rules such as:
+</p>
+
+<ul>
+    <li>Detecting unused React variables</li>
+    <li>Ensuring proper JSX usage</li>
+    <li>Preventing invalid prop usage</li>
+    <li>Enforcing consistent component naming</li>
+</ul>
+
+<p>
+    It helps maintain clean and predictable component structure.
+</p>
+
+<hr />
+
+<h4>3. eslint-plugin-react-hooks</h4>
+
+<p>
+    This is one of the most important React linters today.
+</p>
+
+<ul>
+    <li>Enforces the Rules of Hooks</li>
+    <li>Ensures hooks are not called conditionally</li>
+    <li>Validates dependency arrays in useEffect</li>
+</ul>
+
+<pre><code>
+// Example of rule catching missing dependency
+useEffect(() => {
+    console.log(count);
+}, []); // ESLint warns: missing dependency 'count'
+</code></pre>
+
+<p>
+    Without this plugin, many hook bugs go unnoticed until production.
+</p>
+
+<hr />
+
+<h4>4. eslint-plugin-jsx-a11y</h4>
+
+<p>
+    This plugin enforces accessibility best practices in JSX.
+</p>
+
+<ul>
+    <li>Requires alt attributes on images</li>
+    <li>Prevents invalid ARIA usage</li>
+    <li>Ensures interactive elements are keyboard accessible</li>
+</ul>
+
+<p>
+    Accessibility issues are easy to ignore, and this plugin prevents that.
+</p>
+
+<hr />
+
+<h4>5. TypeScript ESLint integration</h4>
+
+<p>
+    When using TypeScript, <code>@typescript-eslint</code> works alongside ESLint
+    to enforce type-safe and consistent patterns.
+</p>
+
+<hr />
+
+<h4>Why React-specific linters matter</h4>
+
+<ul>
+    <li>Catch hook dependency bugs early</li>
+    <li>Prevent invalid JSX patterns</li>
+    <li>Improve accessibility</li>
+    <li>Maintain consistent structure across teams</li>
+    <li>Reduce production bugs caused by small mistakes</li>
+</ul>
+
+<hr />
+
+<h4>Interview-ready summary</h4>
+
+<p>
+    Popular React-specific linters include eslint-plugin-react,
+    eslint-plugin-react-hooks, and eslint-plugin-jsx-a11y.
+    They matter because they enforce correct hook usage,
+    prevent JSX mistakes, and improve accessibility,
+    significantly reducing runtime bugs.
+</p>
+`,
         },
 
         // Added - practical core topics
         {
             id: "core-077",
             q: "How does React decide what to re-render after state changes?",
-            a: "",
+            a: `
+<p>
+    When state changes in React, it does not blindly re-render the entire DOM.
+    Instead, React follows a structured process to determine exactly what
+    needs to update.
+</p>
+
+<hr />
+
+<h4>1. State update triggers a re-render of that component</h4>
+
+<p>
+    When you call <code>setState</code> or a state updater from
+    <code>useState</code>, React schedules a re-render of that specific component.
+</p>
+
+<pre><code>
+const [count, setCount] = useState(0);
+
+setCount(1); // triggers re-render of this component
+</code></pre>
+
+<p>
+    React re-executes the component function to generate a new virtual UI tree.
+</p>
+
+<hr />
+
+<h4>2. React creates a new virtual DOM tree</h4>
+
+<p>
+    During re-render, React builds a new virtual DOM representation
+    of the component and its children.
+</p>
+
+<p>
+    This is just a lightweight JavaScript object structure,
+    not actual DOM updates yet.
+</p>
+
+<hr />
+
+<h4>3. Reconciliation - diffing old vs new virtual DOM</h4>
+
+<p>
+    React compares the previous virtual DOM tree with the new one.
+    This comparison process is called <strong>reconciliation</strong>.
+</p>
+
+<ul>
+    <li>If element types are the same, React updates only changed props</li>
+    <li>If element types differ, React replaces that subtree</li>
+    <li>For lists, React uses keys to track identity</li>
+</ul>
+
+<hr />
+
+<h4>4. Only changed nodes are updated in the real DOM</h4>
+
+<p>
+    After diffing, React calculates the minimal set of changes
+    and applies them to the actual DOM.
+</p>
+
+<p>
+    This makes UI updates efficient instead of repainting everything.
+</p>
+
+<hr />
+
+<h4>5. What about child components?</h4>
+
+<p>
+    By default, when a parent re-renders, all of its children also re-render.
+</p>
+
+<p>
+    However, React can skip child re-renders if:
+</p>
+
+<ul>
+    <li><code>React.memo</code> is used</li>
+    <li>Props are shallowly equal</li>
+    <li>State inside child has not changed</li>
+</ul>
+
+<hr />
+
+<h4>6. Important performance detail</h4>
+
+<p>
+    React does not compare deep object equality.
+    It relies on reference equality for props and state.
+</p>
+
+<p>
+    That is why immutability is important. If you mutate an object
+    without changing its reference, React may not detect a change.
+</p>
+
+<hr />
+
+<h4>7. Interview-ready summary</h4>
+
+<ul>
+    <li>State update triggers component re-render</li>
+    <li>React builds a new virtual DOM</li>
+    <li>It diffs old vs new tree using reconciliation</li>
+    <li>Only changed nodes are updated in the real DOM</li>
+    <li>Child re-renders can be skipped using React.memo</li>
+</ul>
+
+<p>
+    In short, React re-renders at the component level,
+    then intelligently updates only the necessary DOM parts
+    using its diffing algorithm.
+</p>
+`,
         },
+
         {
             id: "core-078",
             q: "Props drilling: what is it and what are clean fixes?",
-            a: "",
+            a: `
+<p>
+    <strong>Props drilling</strong> happens when you pass props from a parent
+    component down through multiple intermediate components just to reach
+    a deeply nested child.
+</p>
+
+<p>
+    Those intermediate components may not even use the prop - they just
+    forward it further down the tree.
+</p>
+
+<hr />
+
+<h4>1. What props drilling looks like</h4>
+
+<pre><code>
+function App() {
+    const user = { name: "Ash" };
+    return &lt;Layout user={user} /&gt;;
+}
+
+function Layout({ user }) {
+    return &lt;Sidebar user={user} /&gt;;
+}
+
+function Sidebar({ user }) {
+    return &lt;Profile user={user} /&gt;;
+}
+
+function Profile({ user }) {
+    return &lt;div&gt;Hello {user.name}&lt;/div&gt;;
+}
+</code></pre>
+
+<p>
+    Here, <code>Layout</code> and <code>Sidebar</code> do not need the user,
+    but they must pass it down anyway.
+</p>
+
+<hr />
+
+<h4>2. Why props drilling becomes a problem</h4>
+
+<ul>
+    <li>Unnecessary coupling between components</li>
+    <li>Harder refactoring when component structure changes</li>
+    <li>Cluttered props lists</li>
+    <li>Harder readability in large trees</li>
+</ul>
+
+<p>
+    In small apps this is fine. In large apps it becomes messy.
+</p>
+
+<hr />
+
+<h4>3. Clean fixes</h4>
+
+<h5>- 1. React Context</h5>
+
+<p>
+    Context lets you share values without manually passing props
+    through every level.
+</p>
+
+<pre><code>
+const UserContext = React.createContext(null);
+
+function App() {
+    const user = { name: "Ash" };
+
+    return (
+        &lt;UserContext.Provider value={user}&gt;
+            &lt;Layout /&gt;
+        &lt;/UserContext.Provider&gt;
+    );
+}
+
+function Profile() {
+    const user = React.useContext(UserContext);
+    return &lt;div&gt;Hello {user.name}&lt;/div&gt;;
+}
+</code></pre>
+
+<p>
+    Now intermediate components do not need to forward the prop.
+</p>
+
+<hr />
+
+<h5>- 2. Component composition</h5>
+
+<p>
+    Sometimes drilling happens because structure is wrong.
+    You can move the child component closer to where the data exists.
+</p>
+
+<pre><code>
+function App() {
+    const user = { name: "Ash" };
+
+    return (
+        &lt;Layout&gt;
+            &lt;Profile user={user} /&gt;
+        &lt;/Layout&gt;
+    );
+}
+</code></pre>
+
+<p>
+    This avoids passing user through Layout internally.
+</p>
+
+<hr />
+
+<h5>- 3. State management libraries</h5>
+
+<p>
+    For large apps, tools like Redux, Zustand, or similar global
+    state solutions can reduce deep prop passing.
+</p>
+
+<hr />
+
+<h4>4. Important interview clarification</h4>
+
+<p>
+    Props drilling is not automatically bad.
+    It only becomes a problem when the tree gets deep and the
+    intermediate components do not care about the prop.
+</p>
+
+<p>
+    Avoid overusing Context for everything - it can cause unnecessary
+    re-renders if not structured carefully.
+</p>
+
+<hr />
+
+<h4>Interview-ready summary</h4>
+
+<ul>
+    <li>Props drilling means passing props through many layers</li>
+    <li>It increases coupling and reduces readability</li>
+    <li>Context, composition, or state libraries are clean fixes</li>
+    <li>Use Context carefully to avoid performance issues</li>
+</ul>
+
+<p>
+    In real projects, good component design often reduces props
+    drilling before it even becomes a problem.
+</p>
+`,
         },
+
         {
             id: "core-079",
             q: "Derived state: when is it okay and when is it a trap?",
-            a: "",
+            a: `
+<p>
+    <strong>Derived state</strong> means storing a value in state that can be
+    calculated from props or other state values.
+</p>
+
+<p>
+    It sounds convenient, but in many cases it creates duplication and
+    synchronization bugs.
+</p>
+
+<hr />
+
+<h4>1. What is derived state?</h4>
+
+<p>
+    Derived state is when you copy something from props into state,
+    or compute something and store it instead of calculating it during render.
+</p>
+
+<pre><code>
+function Example({ count }) {
+    const [double, setDouble] = React.useState(count * 2);
+    return &lt;div&gt;{double}&lt;/div&gt;;
+}
+</code></pre>
+
+<p>
+    Here, "double" is derived from "count".
+</p>
+
+<hr />
+
+<h4>2. Why derived state is often a trap</h4>
+
+<ul>
+    <li>It duplicates data</li>
+    <li>It can get out of sync</li>
+    <li>You now have two sources of truth</li>
+</ul>
+
+<p>
+    If the parent updates "count", the state "double" will not automatically
+    update unless you add extra logic.
+</p>
+
+<pre><code>
+useEffect(() => {
+    setDouble(count * 2);
+}, [count]);
+</code></pre>
+
+<p>
+    Now you are managing synchronization manually, which increases complexity.
+</p>
+
+<hr />
+
+<h4>3. Better approach - compute during render</h4>
+
+<p>
+    In most cases, you should compute derived values directly inside render.
+</p>
+
+<pre><code>
+function Example({ count }) {
+    const double = count * 2;
+    return &lt;div&gt;{double}&lt;/div&gt;;
+}
+</code></pre>
+
+<p>
+    This avoids duplication and guarantees consistency.
+</p>
+
+<hr />
+
+<h4>4. When derived state is okay</h4>
+
+<ul>
+    <li>When you need to store previous props for comparison</li>
+    <li>When you intentionally create a local editable copy of props</li>
+    <li>When expensive computation needs memoization</li>
+</ul>
+
+<p>
+    Example: form editing where initial value comes from props.
+</p>
+
+<pre><code>
+function Form({ initialName }) {
+    const [name, setName] = React.useState(initialName);
+    return (
+        &lt;input value={name} onChange={e => setName(e.target.value)} /&gt;
+    );
+}
+</code></pre>
+
+<p>
+    Here we intentionally create a controlled local state copy.
+</p>
+
+<hr />
+
+<h4>5. Rule of thumb</h4>
+
+<ul>
+    <li>If it can be computed from props or state - do not store it</li>
+    <li>Avoid duplicating the same data in multiple places</li>
+    <li>Prefer a single source of truth</li>
+</ul>
+
+<hr />
+
+<h4>Interview-ready summary</h4>
+
+<p>
+    Derived state is usually a trap because it duplicates data and creates
+    synchronization issues. It is safe only when you intentionally need a local
+    copy or previous value tracking. Otherwise, compute values directly during render.
+</p>
+`,
         },
+
         {
             id: "core-080",
             q: "When is it okay to keep state local vs shared state?",
-            a: "",
+            a: `
+<p>
+    Deciding between <strong>local state</strong> and <strong>shared state</strong>
+    is about scope and responsibility. The rule is simple -
+    keep state as close as possible to where it is used.
+</p>
+
+<hr />
+
+<h4>1. Keep state local when</h4>
+
+<ul>
+    <li>The state is used by only one component</li>
+    <li>The state does not affect siblings</li>
+    <li>The state is UI-specific - like toggles, modals, input fields</li>
+    <li>No other part of the app needs to react to it</li>
+</ul>
+
+<pre><code>
+function Toggle() {
+    const [open, setOpen] = React.useState(false);
+
+    return (
+        &lt;button onClick={() => setOpen(!open)}&gt;
+            {open ? "Open" : "Closed"}
+        &lt;/button&gt;
+    );
+}
+</code></pre>
+
+<p>
+    Here, the state belongs only to this component.
+    Lifting it up would add unnecessary complexity.
+</p>
+
+<hr />
+
+<h4>2. Share state when</h4>
+
+<ul>
+    <li>Multiple components depend on the same data</li>
+    <li>Updating in one place should update others</li>
+    <li>The data represents global app state - auth, theme, cart, user info</li>
+    <li>You notice prop drilling across many levels</li>
+</ul>
+
+<p>
+    In such cases, lift state to the nearest common ancestor or use
+    Context or a state library if it becomes widely shared.
+</p>
+
+<hr />
+
+<h4>3. Practical mental model</h4>
+
+<ul>
+    <li>Local UI behavior - keep it local</li>
+    <li>Cross-component coordination - lift it</li>
+    <li>App-wide data - centralize it</li>
+</ul>
+
+<p>
+    Over-sharing state makes components tightly coupled.
+    Over-localizing state makes coordination difficult.
+</p>
+
+<hr />
+
+<h4>4. Common mistake</h4>
+
+<p>
+    Many developers move state to global too early.
+    This increases complexity and reduces component reusability.
+</p>
+
+<hr />
+
+<h4>Interview-ready summary</h4>
+
+<ul>
+    <li>Keep state local by default</li>
+    <li>Lift state when multiple components need it</li>
+    <li>Use global state only when truly app-wide</li>
+    <li>State should live at the lowest common owner</li>
+</ul>
+
+<p>
+    In real projects, good state placement is one of the biggest factors
+    in keeping a React codebase clean and maintainable.
+</p>
+`,
         },
+
         {
             id: "core-081",
             q: "How would you handle global app state without Redux?",
-            a: "",
+            a: `
+<p>
+    Global app state can be managed in React without Redux using built-in
+    APIs and lightweight libraries. In many modern projects, Redux is not
+    required unless the application is very large or has complex state flows.
+</p>
+
+<hr />
+
+<h4>1. React Context API</h4>
+
+<p>
+    The most common built-in solution is <strong>Context API</strong>.
+    It allows you to share state across the component tree without prop drilling.
+</p>
+
+<pre><code>
+import { createContext, useContext, useState } from "react";
+
+const AuthContext = createContext(null);
+
+export function AuthProvider({ children }) {
+    const [user, setUser] = useState(null);
+
+    return (
+        &lt;AuthContext.Provider value={{ user, setUser }}&gt;
+            {children}
+        &lt;/AuthContext.Provider&gt;
+    );
+}
+
+export function useAuth() {
+    return useContext(AuthContext);
+}
+</code></pre>
+
+<p>
+    This works well for authentication state, theme state, or small shared data.
+</p>
+
+<hr />
+
+<h4>2. Context + useReducer for structured state</h4>
+
+<p>
+    If state transitions are complex, you can combine Context with
+    <code>useReducer</code> to mimic Redux-style predictable updates.
+</p>
+
+<pre><code>
+function reducer(state, action) {
+    switch (action.type) {
+        case "increment":
+            return { count: state.count + 1 };
+        default:
+            return state;
+    }
+}
+</code></pre>
+
+<p>
+    This keeps updates centralized and easier to debug.
+</p>
+
+<hr />
+
+<h4>3. Lightweight state libraries</h4>
+
+<p>
+    Instead of Redux, many projects use simpler libraries such as:
+</p>
+
+<ul>
+    <li>Zustand - minimal and hook-based</li>
+    <li>Jotai - atomic state model</li>
+    <li>Recoil - state graph model</li>
+</ul>
+
+<p>
+    These require much less boilerplate compared to Redux.
+</p>
+
+<hr />
+
+<h4>4. Server state vs UI state separation</h4>
+
+<p>
+    Often what people store in Redux is actually server data.
+    Libraries like React Query or SWR handle caching, syncing,
+    and background updates much better than manual global state.
+</p>
+
+<hr />
+
+<h4>5. When Redux is still useful</h4>
+
+<ul>
+    <li>Very large applications</li>
+    <li>Complex cross-feature state dependencies</li>
+    <li>Strict predictability and middleware needs</li>
+</ul>
+
+<hr />
+
+<h4>Interview-ready summary</h4>
+
+<ul>
+    <li>Context API is the built-in global state solution</li>
+    <li>Context + useReducer can replace Redux patterns</li>
+    <li>Lightweight libraries like Zustand reduce boilerplate</li>
+    <li>Server state should usually be handled separately</li>
+</ul>
+
+<p>
+    In modern React apps, Redux is optional. Most global state needs
+    can be handled with Context, reducers, and specialized libraries.
+</p>
+`,
         },
+
         {
             id: "core-082",
             q: "What are common React performance smells you look for?",
-            a: "",
+            a: `
+<p>
+    In React, performance issues usually do not come from React itself,
+    but from how components are structured and how state is managed.
+    I look for common patterns that cause unnecessary re-renders or heavy work.
+</p>
+
+<hr />
+
+<h4>1. Unnecessary re-renders</h4>
+
+<p>
+    A very common smell is components re-rendering even when their visible output
+    has not changed.
+</p>
+
+<ul>
+    <li>Inline object props - <code>style={{}}</code></li>
+    <li>Inline arrow functions - <code>onClick={() => doSomething()}</code></li>
+    <li>Parent re-renders causing deep child re-renders</li>
+</ul>
+
+<p>
+    Because objects and functions get recreated on every render, React sees them
+    as new references and triggers updates.
+</p>
+
+<hr />
+
+<h4>2. Missing or incorrect keys in lists</h4>
+
+<p>
+    Using index as a key or unstable keys can cause incorrect DOM reuse,
+    extra renders, or UI glitches.
+</p>
+
+<pre><code>
+{items.map((item, index) => (
+    &lt;li key={index}&gt;{item.name}&lt;/li&gt;
+))}
+</code></pre>
+
+<p>
+    Keys should be stable and unique.
+</p>
+
+<hr />
+
+<h4>3. Large components doing too much</h4>
+
+<p>
+    A component managing too much state or logic becomes harder to optimize.
+    Breaking it into smaller memoized components often improves performance.
+</p>
+
+<hr />
+
+<h4>4. Heavy computations inside render</h4>
+
+<p>
+    Expensive calculations inside the component body run on every render.
+</p>
+
+<pre><code>
+const filtered = bigList.filter(item => expensiveCheck(item));
+</code></pre>
+
+<p>
+    If the data does not change frequently, it should be memoized using
+    <code>useMemo</code>.
+</p>
+
+<hr />
+
+<h4>5. Uncontrolled global state updates</h4>
+
+<p>
+    Updating high-level state that many components depend on can trigger
+    widespread re-renders.
+</p>
+
+<p>
+    State should be placed as close as possible to where it is needed.
+</p>
+
+<hr />
+
+<h4>6. Missing memoization where necessary</h4>
+
+<ul>
+    <li>Not using <code>React.memo</code> for pure components</li>
+    <li>Not using <code>useCallback</code> for stable callbacks</li>
+    <li>Not using <code>useMemo</code> for expensive derived data</li>
+</ul>
+
+<p>
+    However, memoization itself can become a smell if used everywhere
+    without measurement.
+</p>
+
+<hr />
+
+<h4>7. Large uncontrolled lists without virtualization</h4>
+
+<p>
+    Rendering thousands of DOM nodes at once is a performance smell.
+    Libraries like react-window or react-virtualized should be used
+    for large datasets.
+</p>
+
+<hr />
+
+<h4>8. Excessive context usage</h4>
+
+<p>
+    Updating a context value re-renders all consumers.
+    If the context holds frequently changing values,
+    it can become a hidden performance issue.
+</p>
+
+<hr />
+
+<h4>Interview-ready summary</h4>
+
+<ul>
+    <li>Unnecessary re-renders due to unstable references</li>
+    <li>Incorrect keys in lists</li>
+    <li>Heavy computations inside render</li>
+    <li>Large components with misplaced state</li>
+    <li>Rendering huge lists without virtualization</li>
+</ul>
+
+<p>
+    React performance smells are usually about excessive rendering,
+    unstable references, and misplaced state rather than React itself.
+</p>
+`,
         },
     ],
 };
