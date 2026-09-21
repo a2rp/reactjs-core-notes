@@ -1,4 +1,4 @@
-import{d as O,r as d,u as H,j as e,F as W,a as U,b as P,c as A}from"./index-CXYq0ijd.js";const E={Wrapper:O.div`
+import{d as O,r as d,u as H,j as e,F as W,a as U,b as P,c as A}from"./index-DXlJpGjP.js";const E={Wrapper:O.div`
         max-width: 1440px;
         margin: 0 auto;
         padding: 40px 20px 80px;
