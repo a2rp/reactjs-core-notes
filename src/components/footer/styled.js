@@ -8,103 +8,93 @@ export const Styled = {
         color: var(--color-text-secondary);
         padding: 22px 15px;
 
-        .inner {
+        .inner,
+        .bottom {
             max-width: 1100px;
             margin: 0 auto;
+        }
+
+        .inner {
             display: flex;
             align-items: flex-start;
             justify-content: space-between;
             gap: 18px;
         }
 
-        .left {
-            .title {
-                font-size: 14px;
-                font-weight: 800;
-                color: var(--color-text-primary);
-                margin-bottom: 4px;
-            }
+        .title {
+            font-size: 14px;
+            font-weight: 800;
+            color: var(--color-text-primary);
+            margin-bottom: 4px;
+        }
 
-            .sub {
-                font-size: 12px;
-                color: var(--color-text-secondary);
-                margin-bottom: 10px;
-            }
-
-            .time {
-                font-size: 12px;
-                color: var(--color-text-muted);
-            }
+        .sub,
+        .meta {
+            font-size: 12px;
+            color: var(--color-text-secondary);
+            margin-bottom: 8px;
         }
 
         .right {
+            display: grid;
+            gap: 10px;
+            justify-items: end;
+        }
+
+        .linkGroup {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .right a {
+            width: 34px;
+            height: 34px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            justify-content: center;
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            background: var(--color-surface);
+            color: var(--color-text-primary);
+            text-decoration: none;
+            transition: background 180ms ease, border-color 180ms ease, box-shadow 180ms ease, color 180ms ease;
 
-            a {
-                width: 34px;
-                height: 34px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-
-                border: 1px solid var(--color-border);
-                background: var(--color-surface);
+            &:hover,
+            &:focus-visible {
+                background: var(--color-surface-2);
+                border-color: var(--color-accent);
                 color: var(--color-text-primary);
-                text-decoration: none;
-
-                transition:
-                    background 160ms ease,
-                    transform 0.2s ease;
-
-                &:hover {
-                    background: var(--color-surface-2);
-                    transform: scale(1.2);
-                }
-
-                svg {
-                    font-size: 16px;
-                }
+                box-shadow: 0 0 16px var(--color-accent-soft);
+                outline: none;
             }
         }
 
         .bottom {
-            max-width: 1100px;
-            margin: 14px auto 0;
+            margin-top: 14px;
             padding-top: 12px;
             border-top: 1px solid var(--color-border);
             display: flex;
             align-items: center;
-            justify-content: flex-start;
             gap: 10px;
+            flex-wrap: wrap;
             font-size: 12px;
             color: var(--color-text-muted);
 
-            .dot {
-                opacity: 0.6;
+            a {
+                color: var(--color-text-primary);
+                font-weight: 700;
             }
         }
 
         @media (max-width: 720px) {
             .inner {
                 flex-direction: column;
-                align-items: flex-start;
             }
 
             .right {
-                gap: 8px;
+                justify-items: start;
             }
-        }
-
-        .meta {
-            font-size: 12px;
-            margin-top: 6px;
-            color: var(--color-text-secondary);
-        }
-
-        .meta.muted {
-            color: var(--color-text-muted);
         }
     `,
 };

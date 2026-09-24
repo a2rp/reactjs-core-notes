@@ -1,81 +1,47 @@
 import React from "react";
 import { Styled } from "./styled";
-import { FiGithub, FiLinkedin, FiGlobe, FiFacebook } from "react-icons/fi";
+import { FiCoffee, FiCode, FiFacebook, FiGithub, FiGlobe, FiHeart, FiLinkedin, FiMail, FiYoutube } from "react-icons/fi";
 
-const formatIST = (iso) => {
-    const d = new Date(iso);
+const links = [
+    ["Portfolio", "https://www.ashishranjan.net/", FiGlobe],
+    ["GitHub", "https://github.com/a2rp", FiGithub],
+    ["CodePen", "https://codepen.io/ash1198", FiCode],
+    ["LinkedIn", "https://www.linkedin.com/in/aashishranjan", FiLinkedin],
+    ["Facebook", "https://www.facebook.com/theash.ashish/", FiFacebook],
+    ["YouTube", "https://www.youtube.com/@ashishranjan-ashz?sub_confirmation=1", FiYoutube],
+    ["Email", "mailto:ash.ranjan09@gmail.com", FiMail],
+];
 
-    const parts = new Intl.DateTimeFormat("en-IN", {
-        timeZone: "Asia/Kolkata",
-        month: "short",
-        day: "2-digit",
-        year: "numeric",
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit",
-        hour12: false,
-    }).formatToParts(d);
+const supportLinks = [
+    ["Support", "https://a2rp-donation-page.netlify.app/", FiHeart],
+    ["Buy Me a Coffee", "https://buymeacoffee.com/a2rp", FiCoffee],
+    ["Patreon", "https://www.patreon.com/a2rp", FiHeart],
+];
 
-    const get = (t) => parts.find((p) => p.type === t)?.value || "";
-
-    return `${get("month")} ${get("day")}, ${get("year")} ${get("hour")}:${get("minute")}:${get("second")} hrs`;
-};
+const IconLinks = ({ items }) => (
+    <div className="linkGroup">
+        {items.map(([label, href, Icon]) => (
+            <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} title={label}>
+                <Icon aria-hidden="true" />
+            </a>
+        ))}
+    </div>
+);
 
 const Footer = () => {
-    const lastUpdated =
-        typeof __APP_COMMIT_ISO__ !== "undefined"
-            ? formatIST(__APP_COMMIT_ISO__)
-            : null;
-
+    const lastUpdated = typeof __APP_COMMIT_ISO__ !== "undefined" ? new Date(__APP_COMMIT_ISO__).toLocaleDateString("en-IN") : null;
     return (
         <Styled.Wrapper>
             <div className="inner">
                 <div className="left">
                     <div className="title">reactjs-core-notes</div>
-                    <div className="sub">
-                        React core concepts explained as structured notes and
-                        references.
-                    </div>
-
-                    {lastUpdated && (
-                        <div className="meta">Last updated: {lastUpdated}</div>
-                    )}
+                    <div className="sub">React core concepts explained as structured notes and references.</div>
+                    {lastUpdated && <div className="meta">Last updated: {lastUpdated}</div>}
                 </div>
-
-                <div className="right">
-                    <a
-                        href="https://github.com/a2rp"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        <FiGithub />
-                    </a>
-                    <a
-                        href="https://www.ashishranjan.net"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        <FiGlobe />
-                    </a>
-                    <a
-                        href="https://www.linkedin.com/in/aashishranjan"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        <FiLinkedin />
-                    </a>
-                    <a
-                        href="https://www.facebook.com/theash.ashish/"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        <FiFacebook />
-                    </a>
-                </div>
+                <div className="right"><IconLinks items={links} /><IconLinks items={supportLinks} /></div>
             </div>
-
             <div className="bottom">
-                <span>© {new Date().getFullYear()} a2rp</span>
+                <span>Copyright © {new Date().getFullYear()} <a href="https://www.ashishranjan.net/" target="_blank" rel="noopener noreferrer">Ashish Ranjan</a></span>
                 <span className="dot">•</span>
                 <span>React + styled-components</span>
             </div>

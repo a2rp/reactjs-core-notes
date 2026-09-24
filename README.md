@@ -1,60 +1,34 @@
 # ReactJS Core Notes
 
-A structured collection of **ReactJS core concepts** with clear explanations and practical examples built using **React + styled-components**.
+A structured Vite reference for React fundamentals, practical examples, and interview preparation.
 
-This repository is focused on understanding **how React works internally** and how to apply it in real-world frontend applications.
+![ReactJS Core Notes preview](screenshot.png)
 
----
+## What is included
 
-## What you will find here
+- JSX, components, props, state, and rendering
+- Hooks, effects, events, forms, lists, and keys
+- Styling, performance, routing, and component architecture
+- React interview questions grouped by topic
+- Theme toggle, searchable navigation, and route-aware notes
 
-- React fundamentals and rendering model
-- Components, JSX, props, and state
-- Styling patterns with styled-components
-- Lists, keys, and conditional rendering
-- Side effects and lifecycle with `useEffect`
-- Component architecture and data flow
-- Performance basics and optimization patterns
-- Practical UI-focused examples
+## Tech stack
 
----
+React, Vite, React Router, styled-components, Material UI, and React Icons.
 
-## Tech Stack
+## Run locally
 
-- React (Vite)
-- styled-components
+~~~bash
+npm install
+npm run dev
+~~~
 
----
+Build and deploy:
 
-## Status
-
-🚧 Work in progress  
-Built as a **long-term reference** for solid React fundamentals.
-
----
-
-## Author
-
-Ashish Ranjan  
-GitHub: https://github.com/a2rp  
-Portfolio: https://www.ashishranjan.net
-
-## Links
-
-- Portfolio: [https://www.ashishranjan.net](https://www.ashishranjan.net)
-- GitHub: [https://github.com/a2rp](https://github.com/a2rp)
-- CodePen: [https://codepen.io/ash1198](https://codepen.io/ash1198)
-- LinkedIn: [https://www.linkedin.com/in/aashishranjan](https://www.linkedin.com/in/aashishranjan)
-- Facebook: [https://www.facebook.com/theash.ashish/](https://www.facebook.com/theash.ashish/)
-- YouTube: [https://www.youtube.com/@ashishranjan-ashz?sub_confirmation=1](https://www.youtube.com/@ashishranjan-ashz?sub_confirmation=1)
-- Email: [ash.ranjan09@gmail.com](mailto:ash.ranjan09@gmail.com)
-
-## Support
-
-- Support: [https://a2rp-donation-page.netlify.app/](https://a2rp-donation-page.netlify.app/)
-- Buy Me A Coffee: [https://buymeacoffee.com/a2rp](https://buymeacoffee.com/a2rp)
-- Patreon: [https://patreon.com/a2rp](https://patreon.com/a2rp)
-<!-- Project links -->
+~~~bash
+npm run build
+npm run deploy
+~~~
 
 ## Links
 
@@ -70,6 +44,6 @@ Portfolio: https://www.ashishranjan.net
 
 ## Support
 
-- Support: [https://a2rp-donation-page.netlify.app/](https://a2rp-donation-page.netlify.app/)
-- Buy Me a Coffee: [https://buymeacoffee.com/a2rp](https://buymeacoffee.com/a2rp)
-- Patreon: [https://www.patreon.com/a2rp](https://www.patreon.com/a2rp)
+- [Support](https://a2rp-donation-page.netlify.app/)
+- [Buy Me a Coffee](https://buymeacoffee.com/a2rp)
+- [Patreon](https://patreon.com/a2rp)
